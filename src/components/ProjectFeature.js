@@ -58,8 +58,10 @@ const right = css({
   justifyContent: "space-between"
 });
 
-const rightSummary = css({
-  textAlign: "justify"
+const summaryContainer = css({
+  textAlign: "justify",
+  borderRight: "2px solid #ECC94B",
+  paddingRight: "2rem"
 });
 
 const rightGithub = css({
@@ -98,7 +100,9 @@ function ProjectFeature({
           </div>
         </div>
         <div css={right}>
-          <p css={rightSummary}>{summary}</p>
+          <div css={summaryContainer}>
+            <p>{summary}</p>
+          </div>
           <div css={rightGithub}>
             more info on
             <a href={githubUrl}>GitHub</a>
