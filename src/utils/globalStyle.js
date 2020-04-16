@@ -14,7 +14,6 @@ const reset = css`
 
   body {
     box-sizing: border-box;
-    background-color: black;
   }
 `;
 
@@ -32,6 +31,10 @@ const typography = css`
   h6 {
     font-family: "Montserrat Alternates", Montserrat, Raleway, sans-serif;
     color: ${primaryDarkest};
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 `;
 
