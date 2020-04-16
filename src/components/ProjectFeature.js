@@ -23,6 +23,17 @@ const headerTop = css({
   alignItems: "center"
 });
 
+const headerUpdate = css({
+  fontFamily: "Montserrat Alternates",
+  fontSize: ".875rem",
+  color: "#718096"
+});
+
+const headerSiteUrl = css({
+  fontFamily: "Montserrat Alternates",
+  fontSize: "1.125rem"
+});
+
 const main = css({
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr) .5fr repeat(4, 1fr)",
@@ -50,7 +61,8 @@ const leftImage = css({
 
 const leftTech = css({
   display: "flex",
-  justifyContent: "space-around"
+  justifyContent: "space-around",
+  marginTop: "1.5rem"
 });
 
 const right = css({
@@ -64,13 +76,17 @@ const right = css({
 const summaryContainer = css({
   textAlign: "justify",
   borderRight: "2px solid #ECC94B",
-  paddingRight: "2rem"
+  paddingRight: "2rem",
+  height: "20rem",
+  overflow: "hidden"
 });
 
-const rightGithub = css({
+const githubContainer = css({
+  marginTop: "1rem",
   display: "flex",
   flexDirection: "column",
-  textAlign: "right",
+  alignSelf: "flex-end",
+  textAlign: "center",
   fontSize: "1.25rem"
 });
 
@@ -111,9 +127,9 @@ function ProjectFeature({
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
-          <div css={[montserratAlt, lightGray]}>Updated {lastUpdate}</div>
+          <div css={headerUpdate}>Updated {lastUpdate}</div>
         </div>
-        <div css={montserratAlt}>{siteUrl}</div>
+        <div css={headerSiteUrl}>{siteUrl}</div>
       </header>
       <main css={main}>
         <div css={left}>
@@ -130,7 +146,7 @@ function ProjectFeature({
           <div css={summaryContainer}>
             <p>{summary}</p>
           </div>
-          <div css={[rightGithub, montserratAlt]}>
+          <div css={[githubContainer, montserratAlt]}>
             <div>more info on</div>
             <GithubButton url={githubUrl} />
           </div>

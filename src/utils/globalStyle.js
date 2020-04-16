@@ -34,7 +34,7 @@ const typography = css`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 `;
 
