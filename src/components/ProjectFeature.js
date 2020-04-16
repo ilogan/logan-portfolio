@@ -22,15 +22,15 @@ const headerTop = css({
 
 const main = css({
   display: "grid",
-  gridTemplateColumns: ".5fr repeat(4, 1fr) .5fr repeat(4, 1fr) .5fr",
+  gridTemplateColumns: "repeat(4, 1fr) .5fr repeat(4, 1fr)",
   gridTemplateRows: "auto",
   gridGap: ".5rem",
   marginTop: "1rem",
-  gridColumn: "span 9"
+  gridColumn: "2 / span 9"
 });
 
 const left = css({
-  gridColumn: " 2 / span 4"
+  gridColumn: " 1 / span 4"
 });
 
 const leftImageContainer = css({
@@ -52,7 +52,7 @@ const leftTech = css({
 
 const right = css({
   position: "relative",
-  gridColumn: " 7 / span 4",
+  gridColumn: " 6 / span 4",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between"
