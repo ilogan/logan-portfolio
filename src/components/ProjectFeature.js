@@ -1,6 +1,8 @@
 import React from "react";
 import { css } from "@emotion/core";
 
+import Pill from "./Pill";
+
 const container = css({
   position: "relative",
   display: "grid",
@@ -88,6 +90,10 @@ const triangle = css({
   height: "30rem"
 });
 
+const pillBorder = css({
+  borderBottom: "3px solid #ECC94B"
+});
+
 function ProjectFeature({
   title,
   summary,
@@ -113,9 +119,9 @@ function ProjectFeature({
             <img css={leftImage} src={imageUrl} alt="Project" />
           </div>
           <div css={leftTech}>
-            <div>{tech.first}</div>
-            <div>{tech.second}</div>
-            <div>{tech.third}</div>
+            <Pill border={pillBorder} name={tech.first} />
+            <Pill border={pillBorder} name={tech.second} />
+            <Pill border={pillBorder} name={tech.third} />
           </div>
         </div>
         <div css={right}>

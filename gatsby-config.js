@@ -4,7 +4,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat Alternates\:400,700`, `Montserrat`, `Raleway`],
+        fonts: [
+          `Montserrat Alternates\:400,700`,
+          `Montserrat\:400,600`,
+          `Raleway\:400,600`
+        ],
         display: "swap"
       }
     }
