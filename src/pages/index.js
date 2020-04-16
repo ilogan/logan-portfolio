@@ -9,7 +9,7 @@ import Dashboard from "../components/containers/Dashboard";
 
 const grid = css({
   display: "grid",
-  gridTemplateColumns: "repeat(12, 1fr)",
+  gridTemplateColumns: "repeat(11, 1fr)",
   gridTemplateRows: "auto",
   gridGap: ".5rem"
 });

@@ -3,8 +3,8 @@ import { css } from "@emotion/core";
 
 const navbar = css({
   height: "3rem",
-  gridColumn: "12 span",
-  backgroundColor: "blue"
+  gridColumn: "11 span"
+  // backgroundColor: "blue"
 });
 
 function Navbar() {
