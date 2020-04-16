@@ -70,6 +70,14 @@ const rightGithub = css({
   textAlign: "right"
 });
 
+const montserratAlt = css({
+  fontFamily: "Montserrat Alternates"
+});
+
+const lightGray = css({
+  color: "#718096"
+});
+
 function ProjectFeature({
   title,
   summary,
@@ -84,9 +92,9 @@ function ProjectFeature({
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
-          <div>Updated {lastUpdate}</div>
+          <div css={[montserratAlt, lightGray]}>Updated {lastUpdate}</div>
         </div>
-        <div>{siteUrl}</div>
+        <div css={montserratAlt}>{siteUrl}</div>
       </header>
       <main css={main}>
         <div css={left}>
