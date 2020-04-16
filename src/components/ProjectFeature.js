@@ -1,15 +1,17 @@
 import React from "react";
 import { css } from "@emotion/core";
 
-const grid = css({
+const container = css({
+  position: "relative",
   display: "grid",
-  gridTemplateColumns: "repeat(10, 1fr)",
+  gridTemplateColumns: ".5fr repeat(4, 1fr) .5fr repeat(4, 1fr) .5fr",
   gridTemplateRows: "auto",
-  gridGap: ".5rem"
+  gridGap: ".5rem",
+  maxWidth: "65rem"
 });
 
 const header = css({
-  gridColumn: "span 9"
+  gridColumn: "2 / span 9"
 });
 
 const headerTop = css({
@@ -20,7 +22,7 @@ const headerTop = css({
 
 const main = css({
   display: "grid",
-  gridTemplateColumns: "repeat(9, 1fr)",
+  gridTemplateColumns: ".5fr repeat(4, 1fr) .5fr repeat(4, 1fr) .5fr",
   gridTemplateRows: "auto",
   gridGap: ".5rem",
   marginTop: "1rem",
@@ -28,7 +30,7 @@ const main = css({
 });
 
 const left = css({
-  gridColumn: "span 4"
+  gridColumn: " 2 / span 4"
 });
 
 const leftImageContainer = css({
@@ -48,7 +50,7 @@ const leftTech = css({
 
 const right = css({
   position: "relative",
-  gridColumn: " 6 / span 4",
+  gridColumn: " 7 / span 4",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between"
@@ -74,7 +76,7 @@ function ProjectFeature({
   githubUrl
 }) {
   return (
-    <div css={grid}>
+    <div css={container}>
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
