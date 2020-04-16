@@ -78,6 +78,16 @@ const lightGray = css({
   color: "#718096"
 });
 
+const triangle = css({
+  position: "absolute",
+  zIndex: -1,
+  clipPath: "polygon(0 0, 0% 100%, 60% 100%)",
+  backgroundColor: "#FEFCBF",
+  width: "100%",
+  marginTop: "4rem",
+  height: "30rem"
+});
+
 function ProjectFeature({
   title,
   summary,
@@ -89,6 +99,7 @@ function ProjectFeature({
 }) {
   return (
     <div css={container}>
+      <div css={triangle}></div>
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
