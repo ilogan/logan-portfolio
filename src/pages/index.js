@@ -1,14 +1,24 @@
 import React from "react";
+import { css } from "@emotion/core";
+import { Global } from "@emotion/core";
+import globalStyle from "../utils/globalStyle";
 
-import PortfolioLayout from "../components/layouts/portfolio";
 import Navbar from "../components/containers/Navbar";
 import Sidebar from "../components/containers/Sidebar";
 import Dashboard from "../components/containers/Dashboard";
 
+const grid = css({
+  display: "grid",
+  gridTemplateColumns: "repeat(12, 1fr)",
+  gridTemplateRows: "auto",
+  gridGap: ".5rem"
+});
+
 export default () => (
-  <PortfolioLayout>
+  <div css={grid}>
+    <Global styles={globalStyle} />
     <Navbar />
     <Sidebar />
     <Dashboard />
-  </PortfolioLayout>
+  </div>
 );

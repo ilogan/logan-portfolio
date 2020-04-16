@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 
-const primaryDarkest = '#1A202C';
+const primaryDarkest = "#1A202C";
 // const primaryDarker = '#2D3748';
 
 const reset = css`
@@ -12,20 +12,16 @@ const reset = css`
     box-sizing: inherit;
   }
 
-  html {
-    font-size: 62.5%;
-  }
-
   body {
     box-sizing: border-box;
+    background-color: black;
   }
 `;
 
 const typography = css`
   body {
     font-family: Raleway, Montserrat, sans-serif;
-    font-size: 1.6rem;
-    color: ${primaryDarkest}
+    color: ${primaryDarkest};
   }
 
   h1,
@@ -35,7 +31,7 @@ const typography = css`
   h5,
   h6 {
     font-family: "Montserrat Alternates", Montserrat, Raleway, sans-serif;
-    color: ${primaryDarkest}
+    color: ${primaryDarkest};
   }
 `;
 
