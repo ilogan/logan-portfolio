@@ -34,13 +34,15 @@ const left = css({
 });
 
 const leftImageContainer = css({
-  height: "100%",
-  width: "100%"
+  height: "15rem",
+  width: "100%",
+  overflow: "hidden",
+  borderRadius: "1rem",
+  boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.2)"
 });
 
 const leftImage = css({
-  borderRadius: "1rem",
-  boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.2)"
+  width: "100%"
 });
 
 const leftTech = css({
