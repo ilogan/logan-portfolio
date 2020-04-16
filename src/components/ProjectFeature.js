@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 
 import Pill from "./Pill";
+import GithubButton from "./GithubButton";
 
 const container = css({
   position: "relative",
@@ -69,7 +70,8 @@ const summaryContainer = css({
 const rightGithub = css({
   display: "flex",
   flexDirection: "column",
-  textAlign: "right"
+  textAlign: "right",
+  fontSize: "1.25rem"
 });
 
 const montserratAlt = css({
@@ -128,9 +130,9 @@ function ProjectFeature({
           <div css={summaryContainer}>
             <p>{summary}</p>
           </div>
-          <div css={rightGithub}>
-            more info on
-            <a href={githubUrl}>GitHub</a>
+          <div css={[rightGithub, montserratAlt]}>
+            <div>more info on</div>
+            <GithubButton url={githubUrl} />
           </div>
         </div>
       </main>
