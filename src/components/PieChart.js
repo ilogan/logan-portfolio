@@ -1,5 +1,5 @@
 import React from "react";
-import { VictoryPie, VictoryTooltip } from "victory";
+import { VictoryPie } from "victory";
 
 const data = [
   { x: "HTML", y: 54 },
@@ -7,14 +7,22 @@ const data = [
   { x: "Python", y: 4 }
 ];
 
-const yellows = ["#ECC94B", "#F6E05E", "#FEFCBF"];
-
+const yellows = ["#ECC94B", "#F6E05E", "#FAF089"];
 function PieChart() {
   return (
     <VictoryPie
-      labelComponent={<VictoryTooltip />}
       data={data}
+      labelRadius={30}
       colorScale={yellows}
+      style={{
+        labels: {
+          fill: "#1A202C",
+          fontFamily: "Raleway",
+          fontSize: 18,
+          fontWeight: "600"
+        }
+      }}
+      innerRadius={75}
     />
   );
 }

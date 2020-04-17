@@ -107,6 +107,7 @@ const triangle = css({
 
 const triangleBottom = css({
   position: "absolute",
+  zIndex: -1,
   bottom: "0",
   height: "1rem",
   width: "100%",
@@ -114,8 +115,10 @@ const triangleBottom = css({
 });
 
 const pieChart = css({
-  width: "15rem",
-  height: "15rem"
+  marginTop: "1rem",
+  width: "14rem",
+  borderRadius: "100%",
+  backgroundColor: "white"
 });
 
 const pillBorder = css({
