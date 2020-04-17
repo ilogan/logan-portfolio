@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 
+import PieChart from "./PieChart";
 import Pill from "./Pill";
 import GithubButton from "./GithubButton";
 
@@ -109,7 +110,11 @@ const triangleBottom = css({
   top: "33rem",
   height: "1rem",
   width: "100%",
-  backgroundColor: "#FEFCBF"
+});
+
+const pieChart = css({
+  width: "15rem",
+  height: "15rem"
 });
 
 const pillBorder = css({
@@ -145,6 +150,9 @@ function ProjectFeature({
             <Pill border={pillBorder} name={tech.first} />
             <Pill border={pillBorder} name={tech.second} />
             <Pill border={pillBorder} name={tech.third} />
+          </div>
+          <div css={pieChart}>
+            <PieChart />
           </div>
         </div>
         <div css={right}>
