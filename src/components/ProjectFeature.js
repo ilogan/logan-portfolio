@@ -70,8 +70,7 @@ const right = css({
   position: "relative",
   gridColumn: " 6 / span 4",
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between"
+  flexDirection: "column"
 });
 
 const summaryContainer = css({
@@ -83,10 +82,11 @@ const summaryContainer = css({
 });
 
 const githubContainer = css({
-  marginTop: "1rem",
   display: "flex",
   flexDirection: "column",
   alignSelf: "flex-end",
+  marginTop: "auto",
+  marginBottom: "2rem",
   textAlign: "center",
   fontSize: "1.25rem"
 });
