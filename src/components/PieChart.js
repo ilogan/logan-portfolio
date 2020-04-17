@@ -1,14 +1,8 @@
 import React from "react";
 import { VictoryPie } from "victory";
 
-const data = [
-  { x: "HTML", y: 54 },
-  { x: "Jupyter Notebook", y: 42 },
-  { x: "Python", y: 4 }
-];
-
 const yellows = ["#ECC94B", "#F6E05E", "#FAF089"];
-function PieChart() {
+function PieChart({ data }) {
   return (
     <VictoryPie
       data={data}

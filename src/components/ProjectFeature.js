@@ -117,6 +117,7 @@ const triangleBottom = css({
 
 const pieChart = css({
   marginTop: "1rem",
+  marginBottom: "1rem",
   width: "14rem",
   borderRadius: "100%",
   backgroundColor: "white"
@@ -141,6 +142,7 @@ function ProjectFeature({
   summary,
   lastUpdate,
   tech,
+  data,
   siteUrl,
   imageUrl,
   githubUrl
@@ -167,7 +169,7 @@ function ProjectFeature({
             <Pill border={pillBorder} name={tech.third} />
           </div>
           <div css={pieChart}>
-            <PieChart />
+            <PieChart data={data} />
           </div>
         </div>
         <div css={right}>
