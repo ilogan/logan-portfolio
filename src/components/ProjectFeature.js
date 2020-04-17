@@ -11,7 +11,8 @@ const container = css({
   gridTemplateColumns: ".5fr repeat(4, 1fr) .5fr repeat(4, 1fr) .5fr",
   gridTemplateRows: "auto",
   gridGap: ".5rem",
-  maxWidth: "65rem"
+  maxWidth: "65rem",
+  marginBottom: "1rem"
 });
 
 const header = css({
@@ -125,8 +126,18 @@ const pillBorder = css({
   borderBottom: "3px solid #ECC94B"
 });
 
+const projectNumber = css({
+  fontFamily: "Montserrat Alternates",
+  fontSize: "2rem",
+  fontWeight: "600",
+  alignSelf: "flex-end",
+  margin: "0 auto",
+  color: "#ECC94B"
+});
+
 function ProjectFeature({
   title,
+  number,
   summary,
   lastUpdate,
   tech,
@@ -169,6 +180,7 @@ function ProjectFeature({
           </div>
         </div>
       </main>
+      <div css={projectNumber}>{number}</div>
     </div>
   );
 }

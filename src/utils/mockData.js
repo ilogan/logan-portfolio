@@ -1,5 +1,6 @@
 export const ProjectFeatureMock = {
   title: "Follow Me",
+  number: "2",
   lastUpdate: "Oct 2018",
   tech: {
     first: "TensorFlow",
