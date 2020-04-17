@@ -99,17 +99,18 @@ const triangle = css({
   position: "absolute",
   zIndex: -1,
   clipPath: "polygon(0 0, 0% 100%, 60% 100%)",
-  backgroundColor: "#FEFCBF",
+  backgroundColor: "#FAF089",
   width: "100%",
   marginTop: "4rem",
-  height: "30rem"
+  height: "calc(100% - 4rem)"
 });
 
 const triangleBottom = css({
   position: "absolute",
-  top: "33rem",
+  bottom: "0",
   height: "1rem",
   width: "100%",
+  backgroundColor: "#FAF089"
 });
 
 const pieChart = css({
