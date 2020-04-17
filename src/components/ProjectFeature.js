@@ -94,10 +94,6 @@ const montserratAlt = css({
   fontFamily: "Montserrat Alternates"
 });
 
-const lightGray = css({
-  color: "#718096"
-});
-
 const triangle = css({
   position: "absolute",
   zIndex: -1,
@@ -106,6 +102,14 @@ const triangle = css({
   width: "100%",
   marginTop: "4rem",
   height: "30rem"
+});
+
+const triangleBottom = css({
+  position: "absolute",
+  top: "33rem",
+  height: "1rem",
+  width: "100%",
+  backgroundColor: "#FEFCBF"
 });
 
 const pillBorder = css({
@@ -124,6 +128,7 @@ function ProjectFeature({
   return (
     <div css={container}>
       <div css={triangle}></div>
+      <div css={triangleBottom}></div>
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
