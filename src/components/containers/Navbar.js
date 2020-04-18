@@ -2,14 +2,12 @@ import React from "react";
 import { css } from "@emotion/core";
 
 const navbar = css({
-  height: "3rem",
-  gridColumn: "11 span"
-  // backgroundColor: "blue"
+  height: "3rem"
 });
 
-function Navbar() {
+function Navbar(props) {
   return (
-    <nav css={navbar}>
+    <nav css={navbar} {...props}>
       <header>Navbar</header>
     </nav>
   );
