@@ -1,9 +1,9 @@
 import React from "react";
 import { css } from "@emotion/core";
 
-import PieChart from "../../PieChart";
-import Pill from "../../Pill";
-import GithubButton from "../../GithubButton";
+import PieChart from "./PieChart";
+import Pill from "./Pill";
+import GithubButton from "./GithubButton";
 
 const container = css({
   position: "relative",

@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 
 import Layout from "../components/layout";
-import Home from "../components/containers/Home";
+import Home from "../components/MainSite/Home";
 
 const homeGrid = css({
   gridColumn: "2 / span 10"

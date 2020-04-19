@@ -3,7 +3,7 @@ import { css } from "@emotion/core";
 import { Global } from "@emotion/core";
 import globalStyle from "../utils/globalStyle";
 
-import Navbar from "../components/containers/Navbar";
+import Navbar from "./Navbar";
 
 const grid = css({
   display: "grid",
