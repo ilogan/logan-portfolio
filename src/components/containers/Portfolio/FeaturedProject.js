@@ -1,9 +1,9 @@
 import React from "react";
 import { css } from "@emotion/core";
 
-import PieChart from "./PieChart";
-import Pill from "./Pill";
-import GithubButton from "./GithubButton";
+import PieChart from "../../PieChart";
+import Pill from "../../Pill";
+import GithubButton from "../../GithubButton";
 
 const container = css({
   position: "relative",
@@ -136,7 +136,7 @@ const projectNumber = css({
   color: "#ECC94B"
 });
 
-function ProjectFeature({
+function FeaturedProject({
   title,
   number,
   summary,
@@ -187,4 +187,4 @@ function ProjectFeature({
   );
 }
 
-export default ProjectFeature;
+export default FeaturedProject;

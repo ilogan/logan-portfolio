@@ -1,4 +1,4 @@
-export const ProjectFeatureMock = {
+export const FeaturedProjectMock = {
   title: "Follow Me",
   number: "2",
   lastUpdate: "Oct 2018",
