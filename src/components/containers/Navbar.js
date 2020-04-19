@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { css } from "@emotion/core";
 
 const navbar = css({
@@ -8,7 +9,8 @@ const navbar = css({
 function Navbar(props) {
   return (
     <nav css={navbar} {...props}>
-      <header>Navbar</header>
+      <Link to="/">Home</Link>
+      <Link to="/portfolio">Portfolio</Link>
     </nav>
   );
 }
