@@ -1,12 +1,15 @@
 import React from "react";
+import { css } from "@emotion/core";
 
 import Layout from "../components/layout";
-import Sidebar from "../components/containers/Sidebar";
-import Dashboard from "../components/containers/Dashboard";
+import Home from "../components/containers/Home";
+
+const homeGrid = css({
+  gridColumn: "2 / span 10"
+});
 
 export default () => (
   <Layout>
-    <Sidebar />
-    <Dashboard />
+    <Home css={homeGrid} />
   </Layout>
 );
