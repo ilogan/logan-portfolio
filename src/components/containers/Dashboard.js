@@ -1,17 +1,11 @@
 import React from "react";
-import { css } from "@emotion/core";
 
 import ProjectFeature from "../ProjectFeature";
 import { ProjectFeatureMock } from "../../utils/mockData";
 
-const dashboard = css({
-  gridColumn: "span 10"
-  //backgroundColor: "red"
-});
-
-function Dashboard() {
+function Dashboard(props) {
   return (
-    <div css={dashboard}>
+    <div {...props}>
       <ProjectFeature {...ProjectFeatureMock} />
     </div>
   );
