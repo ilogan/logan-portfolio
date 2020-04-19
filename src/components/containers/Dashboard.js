@@ -1,12 +1,14 @@
 import React from "react";
-
-import ProjectFeature from "../ProjectFeature";
-import { ProjectFeatureMock } from "../../utils/mockData";
+import { Router } from "@reach/router";
+import { FeaturedProjectMock } from "../../utils/mockData";
+import FeaturedProject from "./Portfolio/FeaturedProject";
 
 function Dashboard(props) {
   return (
     <div {...props}>
-      <ProjectFeature {...ProjectFeatureMock} />
+      <Router basepath="portfolio">
+        <FeaturedProject path=":id" {...FeaturedProjectMock} />
+      </Router>
     </div>
   );
 }
