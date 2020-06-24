@@ -5,21 +5,21 @@ import globalStyle from "../utils/globalStyle";
 
 import Navbar from "./Navbar";
 
-const grid = css({
+const layoutGrid = css({
   display: "grid",
-  gridTemplateColumns: "repeat(12, 1fr)",
+  gridTemplateColumns: "1rem repeat(12, 1fr) 1rem",
   gridTemplateRows: "auto",
   gridGap: ".5rem"
 });
 
-const navGrid = css({
-  gridColumn: "12 span"
+const navbarGC = css({
+  gridColumn: "14 span"
 });
 
 export default ({ children }) => (
-  <div css={grid}>
+  <div css={layoutGrid}>
     <Global styles={globalStyle} />
-    <Navbar css={navGrid} />
+    <Navbar css={navbarGC} />
     {children}
   </div>
 );
