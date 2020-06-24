@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 
 import Pill from "./Pill";
-import PieChart from "./PieChart";
+// import PieChart from "./PieChart";
 import GithubButton from "./GithubButton";
 import CardBackground from "./CardBackground";
 
@@ -140,9 +140,9 @@ function ProjectContent({
             <Pill border={pillBorder} name={tech.second} />
             <Pill border={pillBorder} name={tech.third} />
           </div>
-          <div css={pieChart}>
+          {/* <div css={pieChart}>
             <PieChart data={data} />
-          </div>
+          </div> */}
         </div>
         <div css={right}>
           <div css={summaryContainer}>
