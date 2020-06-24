@@ -1,17 +1,22 @@
 export const FeaturedProjectMock = {
-  title: "Follow Me",
+  title: "Werewolf Clone",
   number: "2",
-  lastUpdate: "Oct 2018",
+  lastUpdate: "May 2020",
   tech: {
-    first: "TensorFlow",
-    second: "OpenCV",
-    third: "Jupyter"
+    first: "React",
+    second: "React-Router",
+    third: "Styled-Components"
   },
-  siteUrl: "http://follow-me.com",
+  siteUrl: "https://social-deduction-app.web.app/",
   imageUrl: "https://picsum.photos/400/300",
   githubUrl: "https://github.com/ilogan/RoboND-DeepLearning-Project",
-  summary:
-    "I'm baby shoreditch swag blog truffaut artisan in kombucha mumblecore copper mug. Paleo quinoa mlkshk heirloom palo santo direct trade sint man braid seitan readymade tumeric adipisicing helvetica tousled. Cardigan single-origin coffee raw denim jianbing la croix godard af deserunt scenester craft beer tumeric XOXO pork belly. Vape pour-over aute cupidatat etsy banjo celiac ramps shoreditch nulla jianbing. Cupidatat chicharrones meh stumptown tofu leggings tumblr street art quinoa synth. Typewriter affogato keytar bitters chillwave selvage farm-to-table. Humblebrag fanny pack paleo, photo booth excepteur.",
+  summary: `
+    A joinable web app of the board game, "One Night: Ultimate Werewolf." The app allows users to join and create lobbies with their friends to play Werewolf together online.`,
+  keyTasks: [
+    "scaffolded logic for joining lobbies with other players",
+    "allowed players to perform hidden actions in real time",
+    "created timer to advance game state throughout phases"
+  ],
   data: [
     { x: "HTML", y: 54 },
     { x: "Jupyter Notebook", y: 42 },
