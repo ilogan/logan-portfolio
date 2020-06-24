@@ -1,7 +1,9 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { withAssetPrefix } from "gatsby";
 
 const githubButton = css({
+  color: "white",
   display: "inline-block",
   backgroundColor: "#1A202C",
   borderRadius: "2rem",
