@@ -18,7 +18,8 @@ const cardContainer = css({
 });
 
 const header = css({
-  gridColumn: "span 10"
+  gridColumn: "span 10",
+  marginBottom: "3rem"
 });
 
 const headerTop = css({
@@ -27,7 +28,7 @@ const headerTop = css({
   alignItems: "center"
 });
 
-const headerUpdate = css({
+const headerDate = css({
   fontFamily: "Montserrat Alternates",
   fontSize: ".875rem",
   color: "#718096"
@@ -56,7 +57,8 @@ const leftImageContainer = css({
   width: "100%",
   overflow: "hidden",
   borderRadius: "1rem",
-  boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.2)"
+  boxShadow: "0px 10px 10px rgba(0, 0, 0, 0.2)",
+  marginBottom: "3rem"
 });
 
 const leftImage = css({
@@ -65,8 +67,7 @@ const leftImage = css({
 
 const leftTech = css({
   display: "flex",
-  justifyContent: "space-around",
-  marginTop: "1.5rem"
+  justifyContent: "space-around"
 });
 
 const right = css({
@@ -77,11 +78,33 @@ const right = css({
 });
 
 const summaryContainer = css({
-  textAlign: "justify",
-  borderRight: "2px solid #ECC94B",
-  paddingRight: "2rem",
-  height: "20rem",
-  overflow: "hidden"
+  // border: "1px solid #ECC94B",
+  // borderRadius: "6px",
+  // padding: "1rem",
+  fontSize: "1rem",
+  lineHeight: "1.5rem",
+  marginBottom: "2rem"
+});
+
+const tasksContainer = css({
+  listStyle: "none",
+  lineHeight: "1.5rem",
+  padding: 0,
+  marginLeft: 0,
+  fontSize: ".875rem",
+  marginBottom: "6rem"
+});
+
+const liTask = css({
+  paddingLeft: "1rem",
+  textIndent: "-1.25rem",
+  "&::before": {
+    content: '"•"',
+    paddingRight: "10px",
+    color: "#FFD845",
+    verticalAlign: "middle",
+    fontSize: "1.75rem"
+  }
 });
 
 const githubContainer = css({
@@ -98,13 +121,13 @@ const montserratAlt = css({
   fontFamily: "Montserrat Alternates"
 });
 
-const pieChart = css({
-  marginTop: "1rem",
-  marginBottom: "1rem",
-  width: "14rem",
-  borderRadius: "100%",
-  backgroundColor: "white"
-});
+// const pieChart = css({
+//   marginTop: "1rem",
+//   marginBottom: "1rem",
+//   width: "14rem",
+//   borderRadius: "100%",
+//   backgroundColor: "white"
+// });
 
 const pillBorder = css({
   borderBottom: "3px solid #ECC94B"
@@ -113,6 +136,7 @@ const pillBorder = css({
 function ProjectContent({
   title,
   summary,
+  keyTasks,
   lastUpdate,
   tech,
   data,
@@ -126,9 +150,11 @@ function ProjectContent({
       <header css={header}>
         <div css={headerTop}>
           <h1>{title}</h1>
-          <div css={headerUpdate}>Updated {lastUpdate}</div>
+          <div css={headerDate}>{lastUpdate}</div>
         </div>
-        <div css={headerSiteUrl}>{siteUrl}</div>
+        <a href={siteUrl} target="_blank" css={headerSiteUrl}>
+          {siteUrl}
+        </a>
       </header>
       <main css={main}>
         <div css={left}>
@@ -148,6 +174,13 @@ function ProjectContent({
           <div css={summaryContainer}>
             <p>{summary}</p>
           </div>
+          <ul css={tasksContainer}>
+            {keyTasks.map((task, i) => (
+              <li key={`task_${i}`} css={liTask}>
+                {task}
+              </li>
+            ))}
+          </ul>
           <div css={[githubContainer, montserratAlt]}>
             <div>more info on</div>
             <GithubButton url={githubUrl} />
