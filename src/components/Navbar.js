@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, withAssetPrefix } from "gatsby";
 import { css } from "@emotion/core";
 
 const yellow = "#FFD845";
@@ -18,6 +18,7 @@ const secondary = pink;
 // TAG CHANGES SCOPED TO NAVBAR
 const navbarGlobals = css({
   a: {
+    color: "white",
     textDecoration: "none",
     "&:visited": {
       color: "white"
@@ -58,7 +59,6 @@ const left = css({
 
 const nameContainer = css({
   display: "inline-block",
-  borderBottom: `1px solid ${primary}`,
   padding: ".25rem"
 });
 
