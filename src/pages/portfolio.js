@@ -6,18 +6,18 @@ import Sidebar from "../components/PortfolioApp/Sidebar";
 import Dashboard from "../components/PortfolioApp/Dashboard";
 import Routes from "../components/PortfolioApp/Dashboard/Routes";
 
-const sideGrid = css({
-  gridColumn: "span 1"
+const sidebarGC = css({
+  gridColumn: "2 / span 1"
 });
 
-const dashGrid = css({
-  gridColumn: "2 / span 10"
+const dashboardGC = css({
+  gridColumn: "3 / span 11"
 });
 
 export default () => (
   <Layout>
-    <Sidebar css={sideGrid} />
-    <Dashboard css={dashGrid}>
+    <Sidebar css={sidebarGC} />
+    <Dashboard css={[dashboardGC]}>
       <Routes />
     </Dashboard>
   </Layout>
