@@ -1,0 +1,14 @@
+type Project {
+  title: String!
+  summary: String!
+  githubUrl: String!
+  siteUrl: String
+  keyTasks: [String!]!
+  tech: [String!]!
+  date: Date!
+  # todo imageUrl
+}
+
+type Query {
+  allProjects: [Project!]!
+}
