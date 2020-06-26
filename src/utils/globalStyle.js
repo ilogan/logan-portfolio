@@ -36,6 +36,11 @@ const typography = css`
   h1 {
     font-size: 3.5rem;
   }
+
+  h2 {
+    font-family: Raleway;
+    font-weight: 600;
+  }
 `;
 
 export default css([reset, typography]);

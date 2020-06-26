@@ -78,12 +78,14 @@ const right = css({
 });
 
 const summaryContainer = css({
-  // border: "1px solid #ECC94B",
-  // borderRadius: "6px",
-  // padding: "1rem",
   fontSize: "1rem",
+  fontWeight: 500,
   lineHeight: "1.5rem",
-  marginBottom: "2rem"
+  marginBottom: "3rem"
+});
+
+const cardH2 = css({
+  fontSize: "1.25rem"
 });
 
 const tasksContainer = css({
@@ -92,12 +94,14 @@ const tasksContainer = css({
   padding: 0,
   marginLeft: 0,
   fontSize: ".875rem",
+  marginTop: ".5rem",
   marginBottom: "6rem"
 });
 
 const liTask = css({
   paddingLeft: "1rem",
   textIndent: "-1.25rem",
+  fontWeight: 500,
   "&::before": {
     content: '"•"',
     paddingRight: "10px",
@@ -174,6 +178,7 @@ function ProjectContent({
           <div css={summaryContainer}>
             <p>{summary}</p>
           </div>
+          <h2 css={cardH2}>Key Responsibilities</h2>
           <ul css={tasksContainer}>
             {keyTasks.map((task, i) => (
               <li key={`task_${i}`} css={liTask}>

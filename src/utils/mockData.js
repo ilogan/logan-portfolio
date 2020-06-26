@@ -11,7 +11,7 @@ export const FeaturedProjectMock = {
   imageUrl: "https://picsum.photos/400/300",
   githubUrl: "https://github.com/ilogan/RoboND-DeepLearning-Project",
   summary: `
-    A joinable web app of the board game, "One Night: Ultimate Werewolf." The app allows users to join and create lobbies with their friends to play Werewolf together online.`,
+    An online version of the board game, "One Night: Ultimate Werewolf." The app allows users to join and create lobbies with their friends to play Werewolf together in a real time session.`,
   keyTasks: [
     "scaffolded logic for joining lobbies with other players",
     "allowed players to perform hidden actions in real time",
