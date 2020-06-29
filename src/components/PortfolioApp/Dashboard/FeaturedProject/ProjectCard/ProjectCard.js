@@ -137,38 +137,29 @@ const pillBorder = css({
   borderBottom: "3px solid #ECC94B"
 });
 
-function ProjectContent({
-  title,
-  summary,
-  keyTasks,
-  lastUpdate,
-  tech,
-  data,
-  siteUrl,
-  imageUrl,
-  githubUrl,
-  className
-}) {
+function ProjectContent({ project, className }) {
+  // todo transform date
+  console.log(project.date);
   return (
     <div className={className} css={cardContainer}>
       <header css={header}>
         <div css={headerTop}>
-          <h1>{title}</h1>
-          <div css={headerDate}>{lastUpdate}</div>
+          <h1>{project.title}</h1>
+          <div css={headerDate}>{project.date}</div>
         </div>
-        <a href={siteUrl} target="_blank" css={headerSiteUrl}>
-          {siteUrl}
+        <a href={project.siteUrl} target="_blank" css={headerSiteUrl}>
+          {project.siteUrl}
         </a>
       </header>
       <main css={main}>
         <div css={left}>
           <div css={leftImageContainer}>
-            <img css={leftImage} src={imageUrl} alt="Project" />
+            <img css={leftImage} src={project.imageUrl} alt="Project" />
           </div>
           <div css={leftTech}>
-            <Pill border={pillBorder} name={tech.first} />
-            <Pill border={pillBorder} name={tech.second} />
-            <Pill border={pillBorder} name={tech.third} />
+            {project.tech.map((t, i) => (
+              <Pill key={t + i} border={pillBorder} name={t} />
+            ))}
           </div>
           {/* <div css={pieChart}>
             <PieChart data={data} />
@@ -176,11 +167,11 @@ function ProjectContent({
         </div>
         <div css={right}>
           <div css={summaryContainer}>
-            <p>{summary}</p>
+            <p>{project.summary}</p>
           </div>
           <h2 css={cardH2}>Key Responsibilities</h2>
           <ul css={tasksContainer}>
-            {keyTasks.map((task, i) => (
+            {project.keyTasks.map((task, i) => (
               <li key={`task_${i}`} css={liTask}>
                 {task}
               </li>
@@ -188,7 +179,7 @@ function ProjectContent({
           </ul>
           <div css={[githubContainer, montserratAlt]}>
             <div>more info on</div>
-            <GithubButton url={githubUrl} />
+            <GithubButton url={project.githubUrl} />
           </div>
         </div>
       </main>

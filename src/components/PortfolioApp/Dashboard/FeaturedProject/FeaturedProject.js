@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { css } from "@emotion/core";
+import axios from "axios";
 
 import ProjectCard from "./ProjectCard";
 
@@ -21,11 +22,29 @@ const numberGC = css({
 });
 
 function FeaturedProject(props) {
+  const [status, setStatus] = useState("loading");
+  const [project, setProject] = useState(null);
+  console.log(project);
+
+  useEffect(() => {
+    let canceled = false;
+    if (status !== "loading") return;
+    console.log(props.id);
+    axios
+      .post("/api/get-project", { id: props.id })
+      .then(({ data }) => setProject(data.project.findProjectByID));
+  }, [status]);
   return (
     <div css={featuredProjectGrid}>
+      {project ? (
+        <>
+          <ProjectCard css={contentGC} project={project} {...props} />
+          <ProjectNumber number={props.number} />
+        </>
+      ) : (
+        <div css={contentGC}>Loading...</div>
+      )}
       {/* <ProjectBackGround /> */}
-      <ProjectCard css={contentGC} {...props} />
-      <ProjectNumber number={props.number} />
     </div>
   );
 }

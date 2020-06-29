@@ -1,7 +1,7 @@
 require("dotenv").config();
 const axios = require("axios");
 
-const sendQuery = async (query, vars) => {
+const sendQuery = async (query, variables) => {
   const { data } = await axios({
     url: "https://graphql.fauna.com/graphql",
     method: "POST",
@@ -10,7 +10,7 @@ const sendQuery = async (query, vars) => {
     },
     data: {
       query,
-      vars
+      variables
     }
   });
   return data;

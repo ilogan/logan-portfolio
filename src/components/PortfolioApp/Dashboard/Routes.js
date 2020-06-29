@@ -8,7 +8,7 @@ import Home from "./Home";
 function Routes() {
   return (
     <Router basepath="portfolio">
-      <FeaturedProject path=":id" {...FeaturedProjectMock} />
+      <FeaturedProject path=":id" />
       <Home path="/" />
     </Router>
   );
