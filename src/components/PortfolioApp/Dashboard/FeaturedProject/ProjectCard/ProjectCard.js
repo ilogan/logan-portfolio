@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { Image } from "cloudinary-react";
 
 import Pill from "./Pill";
 // import PieChart from "./PieChart";
@@ -154,7 +155,12 @@ function ProjectContent({ project, className }) {
       <main css={main}>
         <div css={left}>
           <div css={leftImageContainer}>
-            <img css={leftImage} src={project.imageUrl} alt="Project" />
+            <Image
+              css={leftImage}
+              publicId={project.asset.id}
+              cloudName={project.asset.cloudName}
+              alt="Project"
+            />
           </div>
           <div css={leftTech}>
             {project.tech.map((t, i) => (

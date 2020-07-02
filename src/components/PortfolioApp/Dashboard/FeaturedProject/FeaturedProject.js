@@ -44,7 +44,6 @@ function FeaturedProject(props) {
       ) : (
         <div css={contentGC}>Loading...</div>
       )}
-      {/* <ProjectBackGround /> */}
     </div>
   );
 }

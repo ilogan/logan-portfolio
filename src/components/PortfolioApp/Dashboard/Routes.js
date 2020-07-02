@@ -1,6 +1,5 @@
 import React from "react";
 import { Router } from "@reach/router";
-import { FeaturedProjectMock } from "../../../utils/mockData";
 
 import FeaturedProject from "./FeaturedProject";
 import Home from "./Home";

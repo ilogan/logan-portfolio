@@ -10,6 +10,12 @@ const GET_PROJECT = `
       keyTasks
       tech
       date
+      asset {
+        id
+        url
+        type
+        cloudName
+      }
     }
   }
 `;
