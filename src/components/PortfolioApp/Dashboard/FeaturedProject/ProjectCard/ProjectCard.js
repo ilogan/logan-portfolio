@@ -148,7 +148,12 @@ function ProjectContent({ project, className }) {
           <h1>{project.title}</h1>
           <div css={headerDate}>{project.date}</div>
         </div>
-        <a href={project.siteUrl} target="_blank" css={headerSiteUrl}>
+        <a
+          href={project.siteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          css={headerSiteUrl}
+        >
           {project.siteUrl}
         </a>
       </header>

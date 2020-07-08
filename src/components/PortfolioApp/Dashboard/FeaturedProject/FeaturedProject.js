@@ -22,18 +22,18 @@ const numberGC = css({
 });
 
 function FeaturedProject(props) {
-  const [status, setStatus] = useState("loading");
+  const [status] = useState("loading");
   const [project, setProject] = useState(null);
   console.log(project);
 
   useEffect(() => {
-    let canceled = false;
+    // let canceled = false;
     if (status !== "loading") return;
     console.log(props.id);
     axios
       .post("/api/get-project", { id: props.id })
       .then(({ data }) => setProject(data.project.findProjectByID));
-  }, [status]);
+  }, [status, props.id]);
   return (
     <div css={featuredProjectGrid}>
       {project ? (
