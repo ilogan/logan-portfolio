@@ -16,6 +16,7 @@ function Navbar() {
   return (
     <header
       css={css`
+        padding: 1.25rem 0;
         background-color: #1a202c;
         margin-bottom: 3rem;
       `}
