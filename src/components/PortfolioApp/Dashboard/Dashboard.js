@@ -1,7 +1,7 @@
 import React from "react";
 
 function Dashboard(props) {
-  return <div {...props}>{props.children}</div>;
+  return <div>{props.children}</div>;
 }
 
 export default Dashboard;

@@ -12,7 +12,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-function Navbar() {
+function Navbar({ contentWidth }) {
   return (
     <header
       css={css`
@@ -22,14 +22,13 @@ function Navbar() {
       `}
     >
       <nav
-        css={css`
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: 0 auto;
-          max-width: 1080px;
-          padding: 0.5rem 2.5rem;
-        `}
+        css={[
+          contentWidth,
+          css`
+            justify-content: space-between;
+            align-items: center;
+          `
+        ]}
       >
         <div
           css={css`
