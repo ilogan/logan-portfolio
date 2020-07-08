@@ -7,11 +7,11 @@ import Dashboard from "../components/PortfolioApp/Dashboard";
 import Routes from "../components/PortfolioApp/Dashboard/Routes";
 
 const sidebarGC = css({
-  gridColumn: "2 / span 1"
+  gridColumn: "3 / span 2"
 });
 
 const dashboardGC = css({
-  gridColumn: "3 / span 11"
+  gridColumn: "5 / span 7"
 });
 
 export default () => (

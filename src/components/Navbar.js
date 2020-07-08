@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withAssetPrefix } from "gatsby";
+import { Link } from "gatsby";
 import { css } from "@emotion/core";
 
 const yellow = "#FFD845";
@@ -30,12 +30,6 @@ const navbarGlobals = css({
 });
 
 // OVERALL STYLES
-const navbarGrid = css({
-  display: "grid",
-  gridTemplateColumns: "1rem repeat(12, 1fr) 1rem",
-  gridGap: ".5rem",
-  alignItems: "center"
-});
 
 const navbar = css({
   height: "4rem",
@@ -44,7 +38,7 @@ const navbar = css({
 });
 
 const contentGC = css({
-  gridColumn: "3 / span 10"
+  gridColumn: "2 / span 10"
 });
 
 const contentContainer = css({
@@ -64,7 +58,7 @@ const nameContainer = css({
 
 function Navbar(props) {
   return (
-    <nav css={[navbarGrid, navbar, navbarGlobals]} {...props}>
+    <nav css={[navbar, navbarGlobals]}>
       <div css={[contentGC, contentContainer]}>
         <div css={left}>
           <Link to="/">
