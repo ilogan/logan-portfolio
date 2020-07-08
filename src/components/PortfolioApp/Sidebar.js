@@ -6,8 +6,8 @@ function Sidebar() {
   return (
     <aside
       css={css`
-        width: 7.25rem;
-        margin-right: 3rem;
+        min-width: 7.25rem;
+        margin-right: 5rem;
         text-align: right;
       `}
     >
