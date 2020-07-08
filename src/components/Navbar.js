@@ -25,7 +25,9 @@ function Navbar() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 0.5rem calc((100vw - 1000px) / 2);
+          margin: 0 auto;
+          max-width: 1080px;
+          padding: 0.5rem 2.5rem;
         `}
       >
         <div
