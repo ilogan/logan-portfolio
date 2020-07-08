@@ -1,6 +1,6 @@
 import React from "react";
 
-function AllProjects() {
+function SingleProject() {
   return (
     <div>
       <h1>Heyo</h1>
@@ -9,4 +9,4 @@ function AllProjects() {
   );
 }
 
-export default AllProjects;
+export default SingleProject;

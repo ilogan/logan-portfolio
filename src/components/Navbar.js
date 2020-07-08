@@ -1,75 +1,45 @@
 import React from "react";
 import { Link } from "gatsby";
+import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
-const yellow = "#FFD845";
-const salmon = "#f49097";
-const mauve = "#dfb2f4";
-const khaki = "#faf089";
-const maize = "#ecc94b";
-const steel = "#3f7cac";
-const pewter = "#95afba";
-const rose = "#ff5964";
-const pink = "#ffacb2";
-
-const primary = yellow;
-const secondary = pink;
-
-// TAG CHANGES SCOPED TO NAVBAR
-const navbarGlobals = css({
-  a: {
-    color: "white",
-    textDecoration: "none",
-    "&:visited": {
-      color: "white"
-    },
-    "&:hover": {
-      color: primary
-    }
+const NavLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  &.current-page {
+    border-bottom: 1px solid #ffd845;
   }
-});
+`;
 
-// OVERALL STYLES
-
-const navbar = css({
-  height: "4rem",
-  backgroundColor: "#1a202c",
-  marginBottom: "3rem"
-});
-
-const contentGC = css({
-  gridColumn: "2 / span 10"
-});
-
-const contentContainer = css({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center"
-});
-
-const left = css({
-  fontSize: "1.5rem"
-});
-
-const nameContainer = css({
-  display: "inline-block",
-  padding: ".25rem"
-});
-
-function Navbar(props) {
+function Navbar() {
   return (
-    <nav css={[navbar, navbarGlobals]}>
-      <div css={[contentGC, contentContainer]}>
-        <div css={left}>
-          <Link to="/">
-            <div css={nameContainer}>Ian Logan</div>
-          </Link>
+    <header
+      css={css`
+        background-color: #1a202c;
+        margin-bottom: 3rem;
+      `}
+    >
+      <nav
+        css={css`
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem calc((100vw - 1000px) / 2);
+        `}
+      >
+        <div
+          css={css`
+            font-size: 1.5rem;
+          `}
+        >
+          <NavLink to="/">Ian Logan</NavLink>
         </div>
         <div>
-          <Link to="/portfolio">Portfolio</Link>
+          <NavLink to="/portfolio">Portfolio</NavLink>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
