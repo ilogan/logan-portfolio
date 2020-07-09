@@ -66,6 +66,9 @@ function SingleProject() {
         src="https://picsum.photos/1000/600"
         css={css`
           width: 100%;
+          border-radius: 1rem;
+          box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
+          margin-bottom: 2.5rem;
         `}
       />
       <h2>Overview</h2>
