@@ -17,7 +17,7 @@ function SingleProject() {
         css={css`
           border-bottom: 10px solid #ffd845;
           padding-bottom: 0.25rem;
-          margin-bottom: 1.25rem;
+          margin-bottom: 1rem;
         `}
       >
         <h1>Ultimate Werewolf</h1>
@@ -43,7 +43,15 @@ function SingleProject() {
       <ul
         css={css`
           display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
           list-style-type: none;
+          margin-bottom: 3rem;
+          > li {
+            font-size: .875rem;
+            font-weight: bold;
+            padding: .25rem;
+          }
         `}
       >
         <li>#react.js</li>
