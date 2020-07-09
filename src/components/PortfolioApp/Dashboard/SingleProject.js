@@ -1,13 +1,42 @@
 import React from "react";
 import { css } from "@emotion/core";
 
+import LinkIcon from "../../../../assets/link.svg";
+
 function SingleProject() {
   return (
     <div>
-      <div>
+      <div
+        css={css`
+          text-align: right;
+        `}
+      >
         <time datetime="2020-5-20">May 2020</time>
+      </div>
+      <div
+        css={css`
+          border-bottom: 10px solid #ffd845;
+          padding-bottom: 0.25rem;
+          margin-bottom: 1.25rem;
+        `}
+      >
         <h1>Ultimate Werewolf</h1>
-        <a href="http://social-deduction-app.web.app">
+        <a
+          css={css`
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: medium;
+            text-decoration: none;
+          `}
+          href="http://social-deduction-app.web.app"
+        >
+          <LinkIcon
+            height="1.5rem"
+            css={css`
+              padding-right: 0.5rem;
+            `}
+          />
           http://social-deduction-app.web.app
         </a>
       </div>
