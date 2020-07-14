@@ -48,9 +48,9 @@ function SingleProject() {
           list-style-type: none;
           margin-bottom: 3rem;
           > li {
-            font-size: .875rem;
+            font-size: 0.875rem;
             font-weight: bold;
-            padding: .25rem;
+            padding: 0.25rem;
           }
         `}
       >
@@ -71,31 +71,49 @@ function SingleProject() {
           margin-bottom: 2.5rem;
         `}
       />
-      <h2>Overview</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        libero lectus, tempus a consectetur at, finibus eget lacus. Pellentesque
-        nec nulla quis est lacinia congue eget ac nisi. Cras vel sapien
-        pharetra, lacinia velit et, imperdiet odio. Ut molestie placerat quam eu
-        venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-        ullamcorper erat id justo sollicitudin pharetra ac nec quam. Aliquam eu
-        leo sed enim auctor fermentum. Quisque feugiat elit ut mauris molestie
-        lobortis. Phasellus in sem ut eros pulvinar efficitur. Suspendisse
-        potenti. Integer lacus nisi, gravida eu est et, scelerisque rhoncus
-        risus.
-      </p>
-      <h2>Technical Features</h2>
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      </ul>
-      <h2>Personal Responsibilities</h2>
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      </ul>
+      <div
+        css={css`
+          margin-bottom: 2rem;
+        `}
+      >
+        <h2>Overview</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          libero lectus, tempus a consectetur at, finibus eget lacus.
+          Pellentesque nec nulla quis est lacinia congue eget ac nisi. Cras vel
+          sapien pharetra, lacinia velit et, imperdiet odio. Ut molestie
+          placerat quam eu venenatis. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nam ullamcorper erat id justo sollicitudin pharetra
+          ac nec quam. Aliquam eu leo sed enim auctor fermentum. Quisque feugiat
+          elit ut mauris molestie lobortis. Phasellus in sem ut eros pulvinar
+          efficitur. Suspendisse potenti. Integer lacus nisi, gravida eu est et,
+          scelerisque rhoncus risus.
+        </p>
+      </div>
+      <div
+        css={css`
+          margin-bottom: 2rem;
+        `}
+      >
+        <h2>Technical Features</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </div>
+      <div
+        css={css`
+          margin-bottom: 2rem;
+        `}
+      >
+        <h2>Personal Responsibilities</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </div>
       <div>
         <div>Checkout the code on</div>
         <button>GitHub</button>
