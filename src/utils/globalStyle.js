@@ -38,9 +38,15 @@ const typography = css`
   }
 
   h2 {
+    margin-bottom: .5rem;
     font-family: Raleway;
     font-weight: 600;
   }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
 `;
 
 export default css([reset, typography]);

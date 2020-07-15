@@ -3,6 +3,26 @@ import { css } from "@emotion/core";
 
 import LinkIcon from "../../../../assets/link.svg";
 
+const Bullet = ({ fill }) => (
+  <svg
+    height="20"
+    width="20"
+    css={css`
+      margin-right: 0.5rem;
+    `}
+  >
+    <circle cx="10" cy="10" r="5" fill={fill} />
+  </svg>
+);
+
+const ulSVGBullet = css`
+  padding: 0;
+  > li {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
+`;
+
 function SingleProject() {
   return (
     <div>
@@ -45,21 +65,23 @@ function SingleProject() {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          list-style-type: none;
           margin-bottom: 3rem;
           > li {
             font-size: 0.875rem;
             font-weight: bold;
-            padding: 0.25rem;
+            margin-right: 1.625rem;
+            &:last-child {
+              margin-right: 0;
+            }
           }
         `}
       >
-        <li>#react.js</li>
-        <li>#hooks</li>
-        <li>#context</li>
-        <li>#react-router</li>
-        <li>#styled-components</li>
-        <li>#firebase-realtime-database</li>
+        <li>react.js</li>
+        <li>hooks</li>
+        <li>context</li>
+        <li>react-router</li>
+        <li>styled-components</li>
+        <li>firebase-realtime-database</li>
       </ul>
       <img
         alt="project"
@@ -96,10 +118,19 @@ function SingleProject() {
         `}
       >
         <h2>Technical Features</h2>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <ul css={ulSVGBullet}>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
         </ul>
       </div>
       <div
@@ -108,10 +139,19 @@ function SingleProject() {
         `}
       >
         <h2>Personal Responsibilities</h2>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <ul css={ulSVGBullet}>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
+          <li>
+            <Bullet fill="#ffd845" />
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </li>
         </ul>
       </div>
       <div>
