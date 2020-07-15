@@ -40,18 +40,24 @@ const ulSVGBullet = css`
 
 function SingleProject() {
   return (
-    <div>
+    <div
+      css={css`
+        padding-right: 0.5rem;
+      `}
+    >
       <BackgroundBanner fill="#ffd845" />
       <div
         css={css`
           text-align: right;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          color: #1a202c;
         `}
       >
         <time datetime="2020-5-20">May 2020</time>
       </div>
       <div
         css={css`
-          border-bottom: 10px solid #ffd845;
           padding-bottom: 0.25rem;
           margin-bottom: 1rem;
         `}
@@ -59,17 +65,20 @@ function SingleProject() {
         <h1>Ultimate Werewolf</h1>
         <a
           css={css`
+            text-decoration: none;
             display: flex;
             align-items: center;
+            width: fit-content;
             font-size: 1.5rem;
             font-weight: medium;
-            text-decoration: none;
+            color: #1a202c;
           `}
           href="http://social-deduction-app.web.app"
         >
           <LinkIcon
             height="1.5rem"
             css={css`
+              fill: #1a202c;
               padding-right: 0.5rem;
             `}
           />
@@ -79,13 +88,19 @@ function SingleProject() {
       <ul
         css={css`
           display: flex;
-          justify-content: space-between;
           flex-wrap: wrap;
           margin-bottom: 3rem;
+          list-style: none;
+          padding-left: 0;
           > li {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            margin-right: 1.625rem;
+            color: white;
+            background-color: brown;
+            border-radius: 1rem;
+            padding: 0.25rem 0.5rem;
+            margin-right: 1rem;
+            margin-bottom: 0.25rem;
             &:last-child {
               margin-right: 0;
             }
