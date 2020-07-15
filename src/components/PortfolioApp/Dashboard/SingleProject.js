@@ -202,7 +202,7 @@ function SingleProject() {
               text-align: center;
             `}
           >
-            <div>checkout the code on</div>
+            <div>check out the code on</div>
             <GithubButton url="http://github.com">GitHub</GithubButton>
           </div>
         </div>
