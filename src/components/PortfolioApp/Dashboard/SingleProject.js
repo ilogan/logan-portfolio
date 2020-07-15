@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 
 import LinkIcon from "../../../../assets/link.svg";
+import GithubButton from "./GithubButton";
 
 const BackgroundBanner = ({ fill }) => (
   <svg
@@ -148,30 +149,48 @@ function SingleProject() {
           </li>
         </ul>
       </div>
-      <div
-        css={css`
-          margin-bottom: 2rem;
-        `}
-      >
-        <h2>Personal Responsibilities</h2>
-        <ul css={ulSVGBullet}>
-          <li>
-            <Bullet fill="#ffd845" />
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-          </li>
-          <li>
-            <Bullet fill="#ffd845" />
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-          </li>
-          <li>
-            <Bullet fill="#ffd845" />
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-          </li>
-        </ul>
-      </div>
       <div>
-        <div>Checkout the code on</div>
-        <button>GitHub</button>
+        <div
+          css={css`
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+          `}
+        >
+          <div>
+            <h2>Personal Responsibilities</h2>
+            <ul css={ulSVGBullet}>
+              <li>
+                <Bullet fill="#ffd845" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+              <li>
+                <Bullet fill="#ffd845" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+              <li>
+                <Bullet fill="#ffd845" />
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            css={css`
+              display: inline-block;
+              text-align: center;
+            `}
+          >
+            <div>checkout the code on</div>
+            <GithubButton url="http://github.com">GitHub</GithubButton>
+          </div>
+        </div>
       </div>
     </div>
   );

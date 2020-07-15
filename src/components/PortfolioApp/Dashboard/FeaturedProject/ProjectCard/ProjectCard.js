@@ -4,7 +4,7 @@ import { Image } from "cloudinary-react";
 
 import Pill from "./Pill";
 // import PieChart from "./PieChart";
-import GithubButton from "./GithubButton";
+// import GithubButton from "../../GithubButton";
 import CardBackground from "./CardBackground";
 
 const cardContainer = css({
@@ -190,7 +190,7 @@ function ProjectContent({ project, className }) {
           </ul>
           <div css={[githubContainer, montserratAlt]}>
             <div>more info on</div>
-            <GithubButton url={project.githubUrl} />
+            {/* <GithubButton url={project.githubUrl} /> */}
           </div>
         </div>
       </main>
