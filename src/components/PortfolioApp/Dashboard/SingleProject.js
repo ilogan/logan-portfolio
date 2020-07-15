@@ -3,6 +3,20 @@ import { css } from "@emotion/core";
 
 import LinkIcon from "../../../../assets/link.svg";
 
+const BackgroundBanner = ({ fill }) => (
+  <svg
+    css={css`
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30rem;
+      background-color: ${fill};
+      z-index: -1;
+    `}
+  ></svg>
+);
+
 const Bullet = ({ fill }) => (
   <svg
     height="20"
@@ -26,6 +40,7 @@ const ulSVGBullet = css`
 function SingleProject() {
   return (
     <div>
+      <BackgroundBanner fill="#ffd845" />
       <div
         css={css`
           text-align: right;
