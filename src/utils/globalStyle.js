@@ -34,7 +34,9 @@ const typography = css`
   }
 
   h1 {
+    font-family: "Montserrat Alternates";
     font-size: 3.5rem;
+    font-weight: 800;
   }
 
   h2 {
