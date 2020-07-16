@@ -59,13 +59,12 @@ function SingleProject() {
       <div
         css={css`
           padding-bottom: 0.25rem;
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
         `}
       >
         <h1>Ultimate Werewolf</h1>
         <a
           css={css`
-            text-decoration: none;
             display: flex;
             align-items: center;
             width: fit-content;
@@ -89,14 +88,14 @@ function SingleProject() {
         css={css`
           display: flex;
           flex-wrap: wrap;
-          margin-bottom: 3rem;
+          margin-bottom: 1.5rem;
           list-style: none;
           padding-left: 0;
           > li {
             font-size: 0.75rem;
             font-weight: bold;
-            color: white;
-            background-color: brown;
+            color: #1a202c;
+            background-color: rgba(255, 255, 255, 0.6);
             border-radius: 1rem;
             padding: 0.25rem 0.5rem;
             margin-right: 1rem;
