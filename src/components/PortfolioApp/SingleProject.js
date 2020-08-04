@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 import { Link } from "gatsby";
 import { contentWidth, flex } from "../../utils/styleUtils";
 import LinkIcon from "../../../assets/link.svg";
+import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
 const Bullet = ({ fill }) => (
@@ -94,7 +95,7 @@ function SingleProject() {
                 list-style: none;
                 padding-left: 0;
                 > li {
-                  font-size: 0.75rem;
+                  font-size: 0.8125rem;
                   color: #1a202c;
                   background-color: rgba(255, 255, 255, 0.6);
                   border-radius: 1rem;
@@ -107,12 +108,24 @@ function SingleProject() {
                 }
               `}
             >
-              <li>react.js</li>
-              <li>hooks</li>
-              <li>context</li>
-              <li>react-router</li>
-              <li>styled-components</li>
-              <li>firebase-realtime-database</li>
+              <li>
+                <Tag color="teal">react.js</Tag>
+              </li>
+              <li>
+                <Tag color="teal">hooks</Tag>
+              </li>
+              <li>
+                <Tag color="teal">context</Tag>
+              </li>
+              <li>
+                <Tag color="teal">react-router</Tag>
+              </li>
+              <li>
+                <Tag color="pink">styled-components</Tag>
+              </li>
+              <li>
+                <Tag color="orange">firebase-realtime-database</Tag>
+              </li>
             </ul>
           </div>
         </div>
