@@ -7,8 +7,8 @@ import Navbar from "./Navbar";
 const contentWidth = css`
   display: flex;
   margin: 0 auto;
-  max-width: 1080px;
-  padding: 0.5rem 2.5rem;
+  max-width: 1160px;
+  padding: 0 2.5rem;
 `;
 
 export default ({ children }) => (

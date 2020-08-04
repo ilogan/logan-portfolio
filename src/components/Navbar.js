@@ -16,7 +16,7 @@ function Navbar({ contentWidth }) {
   return (
     <header
       css={css`
-        padding: 1.25rem 0;
+        padding: 1.75rem 0;
         background-color: #1a202c;
         margin-bottom: 3rem;
       `}
@@ -35,10 +35,17 @@ function Navbar({ contentWidth }) {
             font-size: 1.5rem;
           `}
         >
-          <NavLink to="/">Ian Logan</NavLink>
+          <NavLink
+            to="/"
+            css={css`
+              font-weight: 500;
+            `}
+          >
+            Ian Logan
+          </NavLink>
         </div>
         <div>
-          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/portfolio">portfolio</NavLink>
         </div>
       </nav>
     </header>
