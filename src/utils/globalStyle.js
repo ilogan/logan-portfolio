@@ -14,12 +14,14 @@ const reset = css`
 
   body {
     box-sizing: border-box;
+    font-size: 1.125rem;
+    background-color: #f7f7f7;
   }
 `;
 
 const typography = css`
   body {
-    font-family: Raleway, Montserrat, sans-serif;
+    font-family: Bitter, sans-serif;
     color: ${primaryDarkest};
   }
 
@@ -29,20 +31,17 @@ const typography = css`
   h4,
   h5,
   h6 {
-    font-family: "Montserrat Alternates", Montserrat, Raleway, sans-serif;
+    font-family: Bitter, sans-serif;
+    font-weight: 700;
     color: ${primaryDarkest};
   }
 
   h1 {
-    font-family: "Montserrat Alternates";
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 4rem;
   }
 
   h2 {
     margin-bottom: .5rem;
-    font-family: Raleway;
-    font-weight: 600;
   }
 
   ul {
