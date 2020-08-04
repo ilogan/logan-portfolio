@@ -22,6 +22,7 @@ const reset = css`
 const typography = css`
   body {
     font-family: Bitter, sans-serif;
+    font-weight: 500;
     color: ${primaryDarkest};
   }
 

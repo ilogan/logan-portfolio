@@ -53,7 +53,6 @@ function SingleProject() {
               css={css`
                 text-align: right;
                 margin-bottom: 0.5rem;
-                font-weight: 500;
                 color: #1a202c;
               `}
             >
@@ -71,14 +70,14 @@ function SingleProject() {
                   display: flex;
                   align-items: center;
                   width: fit-content;
-                  font-size: 1.5rem;
-                  font-weight: medium;
+                  font-size: 1.125rem;
                   color: #1a202c;
+                  text-decoration: none;
                 `}
                 href="http://social-deduction-app.web.app"
               >
                 <LinkIcon
-                  height="1.5rem"
+                  height="1rem"
                   css={css`
                     fill: #1a202c;
                     padding-right: 0.5rem;
@@ -96,7 +95,6 @@ function SingleProject() {
                 padding-left: 0;
                 > li {
                   font-size: 0.75rem;
-                  font-weight: bold;
                   color: #1a202c;
                   background-color: rgba(255, 255, 255, 0.6);
                   border-radius: 1rem;
