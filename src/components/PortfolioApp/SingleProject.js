@@ -32,7 +32,8 @@ function SingleProject() {
       <div
         css={css`
           background-color: #ffffff;
-          padding: 5rem 0;
+          padding-top: 80px;
+          padding-bottom: 24px;
         `}
       >
         <div css={[contentWidth, flex]}>
@@ -43,7 +44,7 @@ function SingleProject() {
               text-align: right;
             `}
           >
-            <Link to="/portfolio/2">Project 2</Link>
+            {/* <Link to="/portfolio/2">Project 2</Link> */}
           </aside>
           <div
             css={css`
@@ -55,14 +56,16 @@ function SingleProject() {
                 text-align: right;
                 margin-bottom: 0.5rem;
                 color: #1a202c;
+                font-size: 1rem;
               `}
             >
               <time dateTime="2020-5-20">May 2020</time>
             </div>
             <div
               css={css`
-                padding-bottom: 0.25rem;
-                margin-bottom: 2rem;
+                padding-bottom: 12px;
+                margin-bottom: 18px;
+                border-bottom: 8px solid #ECC94B;
               `}
             >
               <h1>Ultimate Werewolf</h1>
@@ -133,7 +136,7 @@ function SingleProject() {
       <div
         css={css`
           background-color: #faf089;
-          height: 200px;
+          height: 300px;
         `}
       ></div>
       <div css={[contentWidth, flex]}>
@@ -144,13 +147,13 @@ function SingleProject() {
             text-align: right;
           `}
         >
-          <Link to="/portfolio/2">Project 2</Link>
+          {/* <Link to="/portfolio/2">Project 2</Link> */}
         </aside>
         <div
           css={css`
             width: 100%;
             position: relative;
-            top: -100px;
+            top: -250px;
           `}
         >
           <img
