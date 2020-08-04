@@ -1,8 +1,10 @@
 import React from "react";
+import { css } from "@emotion/core";
+import { contentWidth } from "../../utils/styleUtils";
 
-function Home(props) {
+function Home() {
   return (
-    <div {...props}>
+    <div css={contentWidth}>
       <h1>This is the home page</h1>
     </div>
   );

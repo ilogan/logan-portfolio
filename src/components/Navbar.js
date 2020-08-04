@@ -3,28 +3,29 @@ import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
+import { contentWidth } from "../utils/styleUtils";
+
 const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
-  padding: 0.5rem;
   &.current-page {
     border-bottom: 1px solid #ffd845;
   }
 `;
 
-function Navbar({ contentWidth }) {
+function Navbar() {
   return (
     <header
       css={css`
         padding: 1.75rem 0;
         background-color: #1a202c;
-        margin-bottom: 3rem;
       `}
     >
       <nav
         css={[
           contentWidth,
           css`
+            display: flex;
             justify-content: space-between;
             align-items: center;
           `
