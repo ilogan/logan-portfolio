@@ -1,8 +1,8 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { Link } from "gatsby";
-import { contentWidth, flex } from "../../../utils/styleUtils";
-import LinkIcon from "../../../../assets/link.svg";
+import { contentWidth, flex } from "../../utils/styleUtils";
+import LinkIcon from "../../../assets/link.svg";
 import GithubButton from "./GithubButton";
 
 const Bullet = ({ fill }) => (

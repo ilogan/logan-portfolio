@@ -1,7 +1,7 @@
 import React from "react";
 import { Router } from "@reach/router";
 
-import FeaturedProject from "./FeaturedProject";
+import FeaturedProject from "./Dashboard/FeaturedProject";
 import SingleProject from "./SingleProject";
 
 function Routes() {

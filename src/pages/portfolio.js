@@ -1,7 +1,7 @@
 import React from "react";
 
 import GlobalLayout from "../components/layouts/GlobalLayout";
-import Routes from "../components/PortfolioApp/Dashboard/Routes";
+import Routes from "../components/PortfolioApp/Routes";
 
 export default () => (
   <GlobalLayout>
