@@ -6,26 +6,6 @@ import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
-const Bullet = ({ fill }) => (
-  <svg
-    height="20"
-    width="20"
-    css={css`
-      margin-right: 0.5rem;
-    `}
-  >
-    <circle cx="10" cy="10" r="5" fill={fill} />
-  </svg>
-);
-
-const ulSVGBullet = css`
-  padding: 0;
-  > li {
-    display: flex;
-    margin-bottom: 0.5rem;
-  }
-`;
-
 function SingleProject() {
   return (
     <section>
@@ -133,7 +113,7 @@ function SingleProject() {
         css={css`
           border-bottom: 5px solid #f6e05e;
           border-top: 5px solid #f6e05e;
-          background-color: #FEFCBF;
+          background-color: #fefcbf;
           background-image: url(./skulls.svg);
           height: 400px;
         `}
@@ -159,7 +139,7 @@ function SingleProject() {
             css={css`
               display: flex;
               background-color: white;
-              border: 1px solid #1A202C;
+              border: 1px solid #1a202c;
               border-radius: 4px;
               padding: 5px;
               margin-bottom: 64px;
@@ -172,7 +152,7 @@ function SingleProject() {
               css={css`
                 width: 100%;
                 border-radius: 3px;
-                border: 1px solid #1A202C;
+                border: 1px solid #1a202c;
               `}
             />
           </div>
@@ -201,21 +181,24 @@ function SingleProject() {
             `}
           >
             <h2>Technical Features</h2>
-            <ul css={ulSVGBullet}>
+            <ul
+              css={css`
+                > li {
+                  margin-bottom: 0.5rem;
+                }
+              `}
+            >
               <li>
-                <Bullet fill="#ffd845" />
                 <div>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
               </li>
               <li>
-                <Bullet fill="#ffd845" />
                 <div>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
               </li>
               <li>
-                <Bullet fill="#ffd845" />
                 <div>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
@@ -233,21 +216,24 @@ function SingleProject() {
             >
               <div>
                 <h2>Personal Responsibilities</h2>
-                <ul css={ulSVGBullet}>
+                <ul
+                  css={css`
+                    > li {
+                      margin-bottom: 0.5rem;
+                    }
+                  `}
+                >
                   <li>
-                    <Bullet fill="#ffd845" />
                     <div>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </div>
                   </li>
                   <li>
-                    <Bullet fill="#ffd845" />
                     <div>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </div>
                   </li>
                   <li>
-                    <Bullet fill="#ffd845" />
                     <div>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </div>
