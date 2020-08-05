@@ -65,7 +65,7 @@ function SingleProject() {
               css={css`
                 padding-bottom: 12px;
                 margin-bottom: 18px;
-                border-bottom: 8px solid #ECC94B;
+                border-bottom: 8px solid #a2a2a2;
               `}
             >
               <h1>Ultimate Werewolf</h1>
@@ -99,10 +99,6 @@ function SingleProject() {
                 padding-left: 0;
                 > li {
                   font-size: 0.8125rem;
-                  color: #1a202c;
-                  background-color: rgba(255, 255, 255, 0.6);
-                  border-radius: 1rem;
-                  padding: 0.25rem 0.5rem;
                   margin-right: 1rem;
                   margin-bottom: 0.25rem;
                   &:last-child {
@@ -135,8 +131,11 @@ function SingleProject() {
       </div>
       <div
         css={css`
-          background-color: #faf089;
-          height: 300px;
+          border-bottom: 5px solid #f6e05e;
+          border-top: 5px solid #f6e05e;
+          background-color: #FEFCBF;
+          background-image: url(./skulls.svg);
+          height: 400px;
         `}
       ></div>
       <div css={[contentWidth, flex]}>
@@ -153,19 +152,30 @@ function SingleProject() {
           css={css`
             width: 100%;
             position: relative;
-            top: -250px;
+            top: -350px;
           `}
         >
-          <img
-            alt="project"
-            src="https://picsum.photos/1000/600"
+          <div
             css={css`
-              width: 100%;
-              border-radius: 1rem;
-              box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.25);
-              margin-bottom: 2.5rem;
+              display: flex;
+              background-color: white;
+              border: 1px solid #1A202C;
+              border-radius: 4px;
+              padding: 5px;
+              margin-bottom: 64px;
+              box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
             `}
-          />
+          >
+            <img
+              alt="project"
+              src="https://picsum.photos/1000/600"
+              css={css`
+                width: 100%;
+                border-radius: 3px;
+                border: 1px solid #1A202C;
+              `}
+            />
+          </div>
           <div
             css={css`
               margin-bottom: 2rem;
