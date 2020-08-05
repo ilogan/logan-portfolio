@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { Link } from "gatsby";
 import { contentWidth, flex } from "../../utils/styleUtils";
 import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
@@ -118,7 +117,15 @@ function SingleProject() {
           height: 400px;
         `}
       ></div>
-      <div css={[contentWidth, flex]}>
+      <div
+        css={[
+          contentWidth,
+          flex,
+          css`
+            margin-top: -350px;
+          `
+        ]}
+      >
         <aside
           css={css`
             min-width: 7.25rem;
@@ -131,8 +138,6 @@ function SingleProject() {
         <div
           css={css`
             width: 100%;
-            position: relative;
-            top: -350px;
           `}
         >
           <div
