@@ -110,10 +110,7 @@ function SingleProject() {
       </div>
       <div
         css={css`
-          border-bottom: 5px solid #f6e05e;
-          border-top: 5px solid #f6e05e;
-          background-color: #fefcbf;
-          background-image: url(./skulls.svg);
+          background-color: #cbcbcb;
           height: 400px;
         `}
       ></div>
@@ -143,12 +140,7 @@ function SingleProject() {
           <div
             css={css`
               display: flex;
-              background-color: white;
-              border: 1px solid #1a202c;
-              border-radius: 4px;
-              padding: 5px;
               margin-bottom: 64px;
-              box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.15);
             `}
           >
             <img
@@ -156,8 +148,8 @@ function SingleProject() {
               src="https://picsum.photos/1000/600"
               css={css`
                 width: 100%;
-                border-radius: 3px;
-                border: 1px solid #1a202c;
+                border-radius: 8px;
+                border: 8px solid #1a202c;
               `}
             />
           </div>
