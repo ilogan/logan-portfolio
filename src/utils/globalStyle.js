@@ -42,13 +42,20 @@ const typography = css`
   }
 
   h2 {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    line-height: 170%;
   }
 
   ul {
     padding-left: 1.25rem;
   }
 
+  li {
+    line-height: 170%;
+  }
 `;
 
 export default css([reset, typography]);

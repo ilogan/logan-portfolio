@@ -5,7 +5,8 @@ import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
-function SingleProject() {
+function SingleProject({ project }) {
+  console.log(project);
   return (
     <section>
       <div
@@ -47,7 +48,7 @@ function SingleProject() {
                 border-bottom: 8px solid #a2a2a2;
               `}
             >
-              <h1>Ultimate Werewolf</h1>
+              <h1>{project.title}</h1>
               <a
                 css={css`
                   display: flex;
@@ -66,7 +67,7 @@ function SingleProject() {
                     padding-right: 0.5rem;
                   `}
                 />
-                http://social-deduction-app.web.app
+                {project.siteUrl}
               </a>
             </div>
             <ul
@@ -86,24 +87,16 @@ function SingleProject() {
                 }
               `}
             >
-              <li>
-                <Tag color="teal">react.js</Tag>
-              </li>
-              <li>
-                <Tag color="teal">hooks</Tag>
-              </li>
-              <li>
-                <Tag color="teal">context</Tag>
-              </li>
-              <li>
-                <Tag color="teal">react-router</Tag>
-              </li>
-              <li>
-                <Tag color="pink">styled-components</Tag>
-              </li>
-              <li>
-                <Tag color="orange">firebase-realtime-database</Tag>
-              </li>
+              {project.tags.data.map(t => (
+                <li key={t.id}>
+                  <Tag
+                    color={t.type.color}
+                    backgroundColor={t.type.backgroundColor}
+                  >
+                    {t.name}
+                  </Tag>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -159,18 +152,7 @@ function SingleProject() {
             `}
           >
             <h2>Overview</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              libero lectus, tempus a consectetur at, finibus eget lacus.
-              Pellentesque nec nulla quis est lacinia congue eget ac nisi. Cras
-              vel sapien pharetra, lacinia velit et, imperdiet odio. Ut molestie
-              placerat quam eu venenatis. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Nam ullamcorper erat id justo
-              sollicitudin pharetra ac nec quam. Aliquam eu leo sed enim auctor
-              fermentum. Quisque feugiat elit ut mauris molestie lobortis.
-              Phasellus in sem ut eros pulvinar efficitur. Suspendisse potenti.
-              Integer lacus nisi, gravida eu est et, scelerisque rhoncus risus.
-            </p>
+            <p>{project.summary}</p>
           </div>
           <div
             css={css`
@@ -185,67 +167,45 @@ function SingleProject() {
                 }
               `}
             >
-              <li>
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-              </li>
-              <li>
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-              </li>
-              <li>
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </div>
-              </li>
+              {project.technicalFeatures.map(f => (
+                <li key={f.text}>{f.text}</li>
+              ))}
             </ul>
           </div>
           <div>
             <div
               css={css`
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
                 margin-bottom: 2rem;
               `}
             >
-              <div>
-                <h2>Personal Responsibilities</h2>
-                <ul
-                  css={css`
-                    > li {
-                      margin-bottom: 0.5rem;
-                    }
-                  `}
-                >
-                  <li>
-                    <div>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div
+              <h2>Personal Responsibilities</h2>
+              <ul
                 css={css`
-                  display: inline-block;
-                  text-align: center;
+                  > li {
+                    margin-bottom: 0.5rem;
+                  }
                 `}
               >
-                <div>check out the code on</div>
-                <GithubButton url="http://github.com">GitHub</GithubButton>
+                {project.responsibilities.map(r => (
+                  <li key={r.text}>{r.text}</li>
+                ))}
+              </ul>
+            </div>
+            <div
+              css={css`
+                display: inline-block;
+                text-align: center;
+                margin-bottom: 2rem;
+              `}
+            >
+              <div
+                css={css`
+                  margin-bottom: 0.5rem;
+                `}
+              >
+                check out the code on
               </div>
+              <GithubButton url={project.githubUrl}>GitHub</GithubButton>
             </div>
           </div>
         </div>

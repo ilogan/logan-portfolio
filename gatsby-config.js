@@ -1,3 +1,4 @@
+require("dotenv").config();
 module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
@@ -6,9 +7,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Bitter\:400,500,600,700,800`
-        ],
+        fonts: [`Bitter\:400,500,600,700,800`],
         display: "swap"
       }
     },
@@ -21,6 +20,17 @@ module.exports = {
       options: {
         rule: {
           include: /assets/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `Fauna`,
+        fieldName: `fauna`,
+        url: `https://graphql.fauna.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${process.env.FAUNA_SECRET}`
         }
       }
     }
