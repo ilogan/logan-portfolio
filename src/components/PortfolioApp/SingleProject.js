@@ -88,7 +88,7 @@ function SingleProject({ project }) {
               `}
             >
               {project.tags.data.map(t => (
-                <li key={t.id}>
+                <li key={t._id}>
                   <Tag
                     color={t.type.color}
                     backgroundColor={t.type.backgroundColor}
