@@ -1,11 +1,12 @@
 import React from "react";
 import { css } from "@emotion/core";
+import Image from "gatsby-image";
 import { contentWidth, flex } from "../../utils/styleUtils";
 import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
-function SingleProject({ project }) {
+function SingleProject({ project, banner }) {
   console.log(project);
   return (
     <section>
@@ -136,9 +137,9 @@ function SingleProject({ project }) {
               margin-bottom: 64px;
             `}
           >
-            <img
+            <Image
               alt="project"
-              src="https://picsum.photos/1000/600"
+              fluid={banner}
               css={css`
                 width: 100%;
                 border-radius: 8px;

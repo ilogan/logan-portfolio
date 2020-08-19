@@ -24,6 +24,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
+    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: `Fauna`,
@@ -32,6 +39,15 @@ module.exports = {
         headers: {
           Authorization: `Bearer ${process.env.FAUNA_SECRET}`
         }
+      }
+    },
+    {
+      resolve: `gatsby-transformer-cloudinary`,
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        uploadFolder: 'portfolio'
       }
     }
   ]
