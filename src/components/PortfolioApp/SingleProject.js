@@ -139,7 +139,7 @@ function SingleProject({ project, banner }) {
           >
             <Image
               alt="project"
-              fluid={banner}
+              fluid={project.fluid}
               css={css`
                 width: 100%;
                 border-radius: 8px;
