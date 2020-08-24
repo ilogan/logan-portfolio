@@ -19,6 +19,7 @@ export default () => {
       fauna {
         allProjects {
           data {
+            _id
             title
             summary
             siteUrl
