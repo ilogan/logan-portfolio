@@ -1,6 +1,6 @@
 import React from "react";
 import GlobalLayout from "../components/layouts/GlobalLayout";
-import SingleProject from "../components/PortfolioApp/SingleProject";
+import AllProjects from "../components/PortfolioApp/AllProjects";
 import { useStaticQuery, graphql } from "gatsby";
 
 export default () => {
@@ -55,16 +55,14 @@ export default () => {
   // merge image from cloudinary with data from fauna
   const projectList = data.fauna.allProjects.data;
   const imageList = data.allFile.nodes;
-  const projectWithImage = projectList.map(project => {
+  const projectWithImageList = projectList.map(project => {
     const image = imageList.find(image => image.name === project.asset.id);
     return { ...project, fluid: { ...image.childCloudinaryAsset.fluid } };
   });
 
   return (
     <GlobalLayout>
-      <SingleProject
-        project={projectWithImage[0]}
-      />
+      <AllProjects projects={projectWithImageList}/>
     </GlobalLayout>
   );
 };
