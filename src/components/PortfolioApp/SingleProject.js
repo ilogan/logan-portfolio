@@ -12,71 +12,22 @@ function SingleProject({ project, banner }) {
     <section>
       <div
         css={css`
-          background-color: #ffffff;
+          position: absolute;
+          background-color: white;
+          width: 100vw;
+          height: 30rem;
+          z-index: -1;
+          left: 0;
+        `}
+      ></div>
+      <div
+        css={css`
+          /* background-color: #ffffff; */
           padding-top: 80px;
           padding-bottom: 200px;
         `}
       >
         <div css={[contentWidth, flex]}>
-          <aside
-            css={css`
-              min-width: 7.25rem;
-              margin-right: 5rem;
-              text-align: right;
-            `}
-          >
-            <div
-              css={css`
-                position: fixed;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                transform: translate(-55px, 30px);
-              `}
-            >
-              <div
-                css={css`
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-
-                  height: 75px;
-                  width: 75px;
-
-                  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-                  border: 6px solid #ffffff;
-                  border-radius: 50%;
-                  background-color: #e7e7e7;
-                  color: #1a202c;
-
-                  font-size: 2.25rem;
-                  font-weight: 800;
-
-                  margin-bottom: 32px;
-                `}
-              >
-                1
-              </div>
-              <div
-                css={css`
-                  font-weight: 600;
-                  > div {
-                    margin-bottom: 0.5rem;
-                    &:last-child {
-                      margin-right: 0;
-                    }
-                  }
-                `}
-              >
-                <div css={css`
-                  background-color: #1a202c;
-                  color: white;
-                  padding: .25rem .25rem;
-                `}>Ultimate Werewolf</div>
-                <div>Office</div>
-              </div>
-            </div>
-          </aside>
           <div
             css={css`
               width: 100%;
@@ -98,6 +49,7 @@ function SingleProject({ project, banner }) {
                 /* border-bottom: 8px solid #a2a2a2; */
               `}
             >
+              
               <h1
                 css={css`
                   font-size: 4.5rem;
@@ -145,15 +97,14 @@ function SingleProject({ project, banner }) {
           `
         ]}
       >
-        <aside
+        {/* <aside
           css={css`
             min-width: 7.25rem;
             margin-right: 5rem;
             text-align: right;
           `}
         >
-          {/* <Link to="/portfolio/2">Project 2</Link> */}
-        </aside>
+        </aside> */}
         <div
           css={css`
             width: 100%;
