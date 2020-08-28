@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalLayout from "../components/layouts/GlobalLayout";
+import Heading from "../components/Heading";
 import AllProjects from "../components/PortfolioApp/AllProjects";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -63,7 +64,8 @@ export default () => {
 
   return (
     <GlobalLayout>
-      <AllProjects projects={projectWithImageList}/>
+      <Heading title="Portfolio">Here are some of my favorite projects I've made exploring different technologies.</Heading>
+      <AllProjects projects={projectWithImageList} />
     </GlobalLayout>
   );
 };
