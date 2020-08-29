@@ -6,7 +6,7 @@ import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
-function SingleProject({ project, banner }) {
+function SingleProject({ project, number }) {
   console.log(project);
   return (
     <section>
@@ -49,15 +49,46 @@ function SingleProject({ project, banner }) {
                 /* border-bottom: 8px solid #a2a2a2; */
               `}
             >
-              
-              <h1
-                css={css`
-                  font-size: 4.5rem;
-                  margin-bottom: 0.75rem;
-                `}
+              <div
+                css={[
+                  flex,
+                  css`
+                    margin-bottom: 0.75rem;
+                  `
+                ]}
               >
-                {project.title}
-              </h1>
+                <div
+                  css={css`
+                    transform: translateY(5px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 1rem;
+
+                    height: 70px;
+                    min-width: 70px;
+                    width: 40px;
+
+                    border: 4px solid #1a202c;
+                    border-radius: 50%;
+                    background-color: #baebff;
+                    color: #1a202c;
+
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); */
+                  `}
+                >
+                  {number}
+                </div>
+                <h1
+                  css={css`
+                    font-size: 4.5rem;
+                  `}
+                >
+                  {project.title}
+                </h1>
+              </div>
               <a
                 css={css`
                   display: flex;
