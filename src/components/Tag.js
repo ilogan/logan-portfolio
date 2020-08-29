@@ -8,8 +8,9 @@ function Tag({ color, backgroundColor, children }) {
   return (
     <div
       css={css`
-      border: 3px solid white;
-                  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        border: 3px solid white;
+        font-weight: 600;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
         color: ${color || defaultDark};
         background-color: ${backgroundColor || defaultLight};
         padding: 1px 8px;
