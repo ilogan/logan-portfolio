@@ -15,7 +15,7 @@ const reset = css`
   body {
     box-sizing: border-box;
     font-size: 1.125rem;
-    background-color: #f7f7f7;
+    background-color: #e2e2e2;
   }
 `;
 
