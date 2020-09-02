@@ -9,7 +9,7 @@ import GithubButton from "./GithubButton";
 function SingleProject({ project, number }) {
   console.log(project);
   return (
-    <section>
+    <section id={project.title}>
       <div
         css={css`
           position: absolute;
@@ -154,7 +154,7 @@ function SingleProject({ project, number }) {
                 width: 100%;
                 border-radius: 8px;
                 border: 8px solid #ffffff;
-                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
               `}
             />
           </div>
