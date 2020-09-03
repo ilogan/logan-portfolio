@@ -8,8 +8,9 @@ import { contentWidth } from "../utils/styleUtils";
 const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
+  padding-bottom: 4px;
   &.current-page {
-    border-bottom: 1px solid #ffd845;
+    border-bottom: 2px solid #3ea5ff;
   }
 `;
 
@@ -46,7 +47,9 @@ function Navbar() {
           </NavLink>
         </div>
         <div>
-          <NavLink to="/portfolio">portfolio</NavLink>
+          <NavLink to="/portfolio" activeClassName="current-page">
+            portfolio
+          </NavLink>
         </div>
       </nav>
     </header>
