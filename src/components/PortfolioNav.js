@@ -1,12 +1,29 @@
 import React from "react";
 import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 
-const activeNavLink = css`
+const activeHashLink = css`
   background-color: #1a202c;
   color: #fff !important;
 `;
 
-function PortfolioNav({ projects }) {
+const HashLink = styled.a`
+  padding: 0.25rem 0.25rem;
+  text-decoration: none;
+  color: #1a202c;
+  font-size: 1rem;
+  &:hover {
+    ${activeHashLink}
+  }
+  &:visited {
+    color: #1a202c;
+  }
+  &.highlight {
+    ${activeHashLink}
+  }
+`;
+
+function PortfolioNav({ projects, section, setSection }) {
   return (
     <aside
       css={css`
@@ -26,7 +43,7 @@ function PortfolioNav({ projects }) {
             font-weight: 600;
             > li {
               list-style-type: none;
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.25rem;
               &:last-child {
                 margin-right: 0;
               }
@@ -35,21 +52,13 @@ function PortfolioNav({ projects }) {
         >
           {projects.map(project => (
             <li key={project._id}>
-              <a
-                css={css`
-                  padding: 0.25rem 0.25rem;
-                  text-decoration: none;
-                  &:hover {
-                    ${activeNavLink}
-                  }
-                  &:visited {
-                    color: #1a202c;
-                  }
-                `}
+              <HashLink
+                onClick={() => setSection(project.title)}
+                className={`${section === project.title ? "highlight" : null}`}
                 href={`#${project.title}`}
               >
                 {project.title}
-              </a>
+              </HashLink>
             </li>
           ))}
         </ul>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { css } from "@emotion/core";
 import Image from "gatsby-image";
 import { contentWidth, flex } from "../../utils/styleUtils";
@@ -6,10 +6,25 @@ import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
 
-function SingleProject({ project, number }) {
-  console.log(project);
+function SingleProject({ project, number, setSection }) {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = sectionRef.current.getBoundingClientRect();
+      if (position.top <= 1 && position.bottom >= -1) {
+        setSection(project.title);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [project.title, setSection]);
+
   return (
-    <section id={project.title}>
+    <section id={project.title} ref={sectionRef}>
       <div
         css={css`
           position: absolute;
