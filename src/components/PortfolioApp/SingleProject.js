@@ -159,9 +159,6 @@ function SingleProject({ project, number, setSection }) {
             css={css`
               display: flex;
               margin-bottom: 32px;
-              border: 4px solid #1a202c;
-              border-radius: 12px;
-              /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
             `}
           >
             <Image
@@ -171,6 +168,7 @@ function SingleProject({ project, number, setSection }) {
                 width: 100%;
                 border-radius: 8px;
                 border: 8px solid #ffffff;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
               `}
             />
           </div>
