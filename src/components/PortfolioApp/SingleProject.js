@@ -108,15 +108,16 @@ function SingleProject({ project, number, setSection }) {
                   align-items: center;
                   width: fit-content;
                   font-size: 1.125rem;
-                  color: #1a202c;
+                  color: #586377;
                   text-decoration: none;
+                  transform: translateX(96px);
                 `}
                 href="http://social-deduction-app.web.app"
               >
                 <LinkIcon
                   height="1rem"
                   css={css`
-                    fill: #1a202c;
+                    fill: #586377;
                     padding-right: 0.5rem;
                   `}
                 />
