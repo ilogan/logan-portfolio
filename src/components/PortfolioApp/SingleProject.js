@@ -55,9 +55,7 @@ function SingleProject({ project, number, setSection }) {
                 color: #1a202c;
                 font-size: 1rem;
               `}
-            >
-              <time dateTime="2020-5-20">{project.date}</time>
-            </div>
+            ></div>
             <div
               css={css`
                 padding-bottom: 12px;
