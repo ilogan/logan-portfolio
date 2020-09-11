@@ -222,6 +222,16 @@ function SingleProject({ project, number, setSection }) {
               margin-bottom: 2rem;
             `}
           >
+            <h2>Observations</h2>
+            {project.responsibilities.map(r => (
+              <p key={r.text}>{r.text}</p>
+            ))}
+          </div>
+          <div
+            css={css`
+              margin-bottom: 2rem;
+            `}
+          >
             <h2>Technical Features</h2>
             <ul
               css={css`
@@ -236,24 +246,6 @@ function SingleProject({ project, number, setSection }) {
             </ul>
           </div>
           <div>
-            <div
-              css={css`
-                margin-bottom: 2rem;
-              `}
-            >
-              <h2>Personal Responsibilities</h2>
-              <ul
-                css={css`
-                  > li {
-                    margin-bottom: 0.5rem;
-                  }
-                `}
-              >
-                {project.responsibilities.map(r => (
-                  <li key={r.text}>{r.text}</li>
-                ))}
-              </ul>
-            </div>
             <div
               css={css`
                 display: inline-block;
