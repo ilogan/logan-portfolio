@@ -102,27 +102,29 @@ function SingleProject({ project, number, setSection }) {
                   {project.title}
                 </h1>
               </div>
-              <a
-                css={css`
-                  display: flex;
-                  align-items: center;
-                  width: fit-content;
-                  font-size: 1.125rem;
-                  color: #586377;
-                  text-decoration: none;
-                  transform: translateX(96px);
-                `}
-                href="http://social-deduction-app.web.app"
-              >
-                <LinkIcon
-                  height="1rem"
+              {!project.siteUrl ? null : (
+                <a
                   css={css`
-                    fill: #586377;
-                    padding-right: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    width: fit-content;
+                    font-size: 1.125rem;
+                    color: #586377;
+                    text-decoration: none;
+                    transform: translateX(96px);
                   `}
-                />
-                {project.siteUrl}
-              </a>
+                  href={project.siteUrl}
+                >
+                  <LinkIcon
+                    height="1rem"
+                    css={css`
+                      fill: #586377;
+                      padding-right: 0.5rem;
+                    `}
+                  />
+                  {project.siteUrl}
+                </a>
+              )}
             </div>
           </div>
         </div>
