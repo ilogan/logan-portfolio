@@ -64,7 +64,10 @@ export default () => {
 
   return (
     <GlobalLayout>
-      <Heading title="Portfolio">Here are some of my favorite projects I've made exploring different technologies.</Heading>
+      <Heading title="Portfolio">
+        Here are some of my favorite projects I've made exploring different
+        technologies.
+      </Heading>
       <AllProjects projects={projectWithImageList} />
     </GlobalLayout>
   );
