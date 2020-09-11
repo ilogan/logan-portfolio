@@ -29,7 +29,8 @@ function PortfolioNav({ projects, section, setSection }) {
       css={css`
         text-align: right;
         white-space: nowrap;
-        transform: translate(-54px, 100px);
+        transform: translateY(100px);
+        margin: 0px 30px 0px -60px;
       `}
     >
       <div
