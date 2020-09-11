@@ -114,6 +114,8 @@ function SingleProject({ project, number, setSection }) {
                     transform: translateX(96px);
                   `}
                   href={project.siteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <LinkIcon
                     height="1rem"

@@ -16,7 +16,12 @@ const githubButton = css({
 function GithubButton({ url }) {
   return (
     <div>
-      <a css={githubButton} href={url}>
+      <a
+        css={githubButton}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         GitHub
       </a>
     </div>
