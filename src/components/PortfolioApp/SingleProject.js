@@ -208,11 +208,11 @@ function SingleProject({ project, number, setSection }) {
               css={css`
                 width: 100%;
                 border-radius: 8px;
-                border: 4px solid #ffffff;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-                @media (min-width: ${bp.sm}) {
+                border: 1px solid #1a202c;
+                box-shadow: 12px 12px #1a202c;
+                /* @media (min-width: ${bp.sm}) {
                   border-width: 8px;
-                }
+                } */
               `}
             />
           </div>
