@@ -1,14 +1,14 @@
 import React from "react";
 import { Router } from "@reach/router";
 
-import FeaturedProject from "./FeaturedProject";
-import Home from "./Home";
+import FeaturedProject from "./Dashboard/FeaturedProject";
+import SingleProject from "./SingleProject";
 
 function Routes() {
   return (
     <Router basepath="portfolio">
       <FeaturedProject path=":id" />
-      <Home path="/" />
+      <SingleProject path="/" />
     </Router>
   );
 }

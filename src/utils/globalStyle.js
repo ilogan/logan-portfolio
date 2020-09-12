@@ -1,4 +1,5 @@
 import { css } from "@emotion/core";
+import { bp } from "../utils/styleUtils";
 
 const primaryDarkest = "#1A202C";
 // const primaryDarker = '#2D3748';
@@ -14,12 +15,18 @@ const reset = css`
 
   body {
     box-sizing: border-box;
+    font-size: 1rem;
+    @media (min-width: ${bp.sm}) {
+      font-size: 1.125rem;
+    }
+    background-color: #e2e2e2;
   }
 `;
 
 const typography = css`
   body {
-    font-family: Raleway, Montserrat, sans-serif;
+    font-family: Bitter, sans-serif;
+    font-weight: 500;
     color: ${primaryDarkest};
   }
 
@@ -29,17 +36,36 @@ const typography = css`
   h4,
   h5,
   h6 {
-    font-family: "Montserrat Alternates", Montserrat, Raleway, sans-serif;
+    font-family: Bitter, sans-serif;
+    font-weight: 700;
     color: ${primaryDarkest};
   }
 
-  h1 {
-    font-size: 3.5rem;
+  h2 {
+    font-size: 2.5rem;
+    @media (min-width: ${bp.sm}) {
+      font-size: 3rem;
+    }
+    @media (min-width: ${bp.md}) {
+      font-size: 4rem;
+    }
   }
 
-  h2 {
-    font-family: Raleway;
-    font-weight: 600;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    line-height: 170%;
+  }
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  li {
+    line-height: 170%;
   }
 `;
 

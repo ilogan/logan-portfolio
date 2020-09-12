@@ -1,24 +1,74 @@
 import React from "react";
-import { css } from "@emotion/core";
+import GlobalLayout from "../components/layouts/GlobalLayout";
+import Heading from "../components/Heading";
+import AllProjects from "../components/PortfolioApp/AllProjects";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Layout from "../components/layout";
-import Sidebar from "../components/PortfolioApp/Sidebar";
-import Dashboard from "../components/PortfolioApp/Dashboard";
-import Routes from "../components/PortfolioApp/Dashboard/Routes";
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile {
+        nodes {
+          name
+          childCloudinaryAsset {
+            fluid(transformations: ["c_scale", "w_832"]) {
+              ...CloudinaryAssetFluid
+            }
+          }
+        }
+      }
+      fauna {
+        allProjects {
+          data {
+            _id
+            title
+            summary
+            siteUrl
+            githubUrl
+            date
+            asset {
+              id
+              url
+              type
+              cloudName
+            }
+            responsibilities {
+              text
+            }
+            technicalFeatures {
+              text
+            }
+            tags {
+              data {
+                _id
+                name
+                type {
+                  color
+                  backgroundColor
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
 
-const sidebarGC = css({
-  gridColumn: "3 / span 2"
-});
+  // merge image from cloudinary with data from fauna
+  const projectList = data.fauna.allProjects.data;
+  const imageList = data.allFile.nodes;
+  const projectWithImageList = projectList.map(project => {
+    const image = imageList.find(image => image.name === project.asset.id);
+    return { ...project, fluid: { ...image.childCloudinaryAsset.fluid } };
+  });
 
-const dashboardGC = css({
-  gridColumn: "5 / span 7"
-});
-
-export default () => (
-  <Layout>
-    <Sidebar css={sidebarGC} />
-    <Dashboard css={[dashboardGC]}>
-      <Routes />
-    </Dashboard>
-  </Layout>
-);
+  return (
+    <GlobalLayout>
+      <Heading title="Portfolio">
+        Here are some of my favorite projects I've made exploring different
+        technologies.
+      </Heading>
+      <AllProjects projects={projectWithImageList} />
+    </GlobalLayout>
+  );
+};

@@ -3,19 +3,41 @@ type Project {
   summary: String!
   githubUrl: String!
   siteUrl: String
-  keyTasks: [String!]!
-  tech: [String!]!
+  responsibilities: [Responsibility!]!
+  technicalFeatures: [TechnicalFeature!]!
+  tags: [Tag!]! @relation
   date: Date!
   asset: Asset!
 }
 
-type Asset {
+type Responsibility @embedded {
+  text: String!
+}
+
+type TechnicalFeature @embedded {
+  text: String!
+}
+
+type Asset @embedded {
   id: String!
   url: String!
   type: String
   cloudName: String!
 }
 
+type Tag {
+  name: String!
+  type: TagColor!
+  projects: [Project!] @relation
+}
+
 type Query {
   allProjects: [Project!]!
+  allTags: [Tag!]!
+}
+
+type TagColor {
+  name: String!
+  color: String!
+  backgroundColor: String!
 }
