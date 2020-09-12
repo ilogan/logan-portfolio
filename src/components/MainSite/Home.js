@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
 import HeartIcon from "../../../assets/heart.svg";
+import Button from "../Button";
 
 function Home() {
   return (
@@ -25,7 +26,7 @@ function Home() {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
           `}
         >
           <HeartIcon
@@ -43,7 +44,11 @@ function Home() {
             Ian Logan
           </h1>
         </div>
-        <div>
+        <div
+          css={css`
+            margin-bottom: 48px;
+          `}
+        >
           <p
             css={css`
               color: #718096;
@@ -62,6 +67,7 @@ function Home() {
             keep a digital journal of my code.
           </p>
         </div>
+        <Button>Here's my Resumé</Button>
       </div>
     </div>
   );
