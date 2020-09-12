@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { css } from "@emotion/core";
 import Image from "gatsby-image";
-import { contentWidth, flex } from "../../utils/styleUtils";
+import { flex, bp } from "../../utils/styleUtils";
 import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
 import GithubButton from "./GithubButton";
@@ -30,19 +30,24 @@ function SingleProject({ project, number, setSection }) {
           position: absolute;
           background-color: white;
           width: 100vw;
-          height: 30rem;
+          height: 300px;
           z-index: -1;
           left: 0;
+          @media (min-width: ${bp.md}) {
+            height: 364px;
+          }
         `}
       ></div>
       <div
         css={css`
-          /* background-color: #ffffff; */
-          padding-top: 80px;
-          padding-bottom: 200px;
+          padding-top: 24px;
+          padding-bottom: 182px;
+          @media (min-width: ${bp.md}) {
+            padding-top: 60px;
+          }
         `}
       >
-        <div css={[contentWidth, flex]}>
+        <div css={[flex]}>
           <div
             css={css`
               width: 100%;
@@ -63,44 +68,67 @@ function SingleProject({ project, number, setSection }) {
               `}
             >
               <div
-                css={[
-                  flex,
-                  css`
-                    margin-bottom: 0.75rem;
-                  `
-                ]}
+                css={css`
+                  margin-bottom: 0.75rem;
+                  @media (min-width: ${bp.sm}) {
+                    display: flex;
+                  }
+                `}
               >
                 <div
                   css={css`
-                    transform: translateY(5px);
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    margin-right: 1rem;
 
-                    height: 70px;
-                    min-width: 70px;
-                    width: 40px;
-
+                    background-color: #baebff;
                     border: 4px solid #1a202c;
                     border-radius: 50%;
-                    background-color: #baebff;
                     color: #1a202c;
 
-                    font-size: 2.5rem;
+                    height: 40px;
+                    min-width: 40px;
+                    width: 40px;
+                    margin: 0 auto;
+                    margin-bottom: 16px;
+
                     font-weight: 800;
-                    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); */
+                    font-size: 1.25rem;
+
+                    @media (min-width: ${bp.sm}) {
+                      margin-right: 16px;
+                      margin-bottom: 0;
+                      margin-left: 0;
+                      height: 55px;
+                      min-width: 55px;
+                      width: 55px;
+
+                      font-size: 2rem;
+                    }
+
+                    @media (min-width: ${bp.md}) {
+                      transform: translateY(5px);
+                      margin-right: 16px;
+                      height: 70px;
+                      min-width: 70px;
+                      width: 70px;
+
+                      font-size: 2.5rem;
+                    }
                   `}
                 >
                   {number}
                 </div>
-                <h1
+                <h2
                   css={css`
-                    font-size: 4.5rem;
+                    text-align: center;
+                    @media (min-width: ${bp.sm}) {
+                      text-align: left;
+                    }
                   `}
                 >
                   {project.title}
-                </h1>
+                </h2>
               </div>
               {!project.siteUrl ? null : (
                 <a
@@ -108,10 +136,20 @@ function SingleProject({ project, number, setSection }) {
                     display: flex;
                     align-items: center;
                     width: fit-content;
-                    font-size: 1.125rem;
+                    font-size: 0.825rem;
                     color: #586377;
                     text-decoration: none;
-                    transform: translateX(96px);
+                    margin: 0 auto;
+
+                    @media (min-width: ${bp.sm}) {
+                      margin: 0;
+                      transform: translateX(75px);
+                      font-size: 1rem;
+                    }
+                    @media (min-width: ${bp.md}) {
+                      transform: translateX(96px);
+                      font-size: 1.125rem;
+                    }
                   `}
                   href={project.siteUrl}
                   target="_blank"
@@ -139,7 +177,6 @@ function SingleProject({ project, number, setSection }) {
       ></div> */}
       <div
         css={[
-          contentWidth,
           flex,
           css`
             margin-top: -170px;
@@ -171,8 +208,11 @@ function SingleProject({ project, number, setSection }) {
               css={css`
                 width: 100%;
                 border-radius: 8px;
-                border: 8px solid #ffffff;
+                border: 4px solid #ffffff;
                 box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+                @media (min-width: ${bp.sm}) {
+                  border-width: 8px;
+                }
               `}
             />
           </div>
@@ -216,7 +256,7 @@ function SingleProject({ project, number, setSection }) {
               margin-bottom: 2rem;
             `}
           >
-            <h2>Overview</h2>
+            <h3>Overview</h3>
             <p>{project.summary}</p>
           </div>
           <div
@@ -224,7 +264,7 @@ function SingleProject({ project, number, setSection }) {
               margin-bottom: 2rem;
             `}
           >
-            <h2>Observations</h2>
+            <h3>Observations</h3>
             {project.responsibilities.map(r => (
               <p key={r.text}>{r.text}</p>
             ))}
@@ -234,7 +274,7 @@ function SingleProject({ project, number, setSection }) {
               margin-bottom: 2rem;
             `}
           >
-            <h2>Technical Features</h2>
+            <h3>Technical Features</h3>
             <ul
               css={css`
                 > li {

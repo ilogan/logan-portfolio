@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import { contentWidth, flex } from "../../utils/styleUtils";
+import { css } from "@emotion/core";
+import { contentWidth, bp } from "../../utils/styleUtils";
 import SingleProject from "./SingleProject";
 import PortfolioNav from "../PortfolioNav";
 
 function AllProjects({ projects }) {
   const [section, setSection] = useState(projects[0].title);
   return (
-    <div css={[contentWidth, flex]}>
+    <div
+      css={[
+        contentWidth,
+        css`
+          @media (min-width: ${bp.lg}) {
+            display: flex;
+          }
+        `
+      ]}
+    >
       <PortfolioNav
         projects={projects}
         section={section}

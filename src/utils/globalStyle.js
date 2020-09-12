@@ -1,4 +1,5 @@
 import { css } from "@emotion/core";
+import { bp } from "../utils/styleUtils";
 
 const primaryDarkest = "#1A202C";
 // const primaryDarker = '#2D3748';
@@ -14,7 +15,10 @@ const reset = css`
 
   body {
     box-sizing: border-box;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    @media (min-width: ${bp.sm}) {
+      font-size: 1.125rem;
+    }
     background-color: #e2e2e2;
   }
 `;
@@ -37,11 +41,18 @@ const typography = css`
     color: ${primaryDarkest};
   }
 
-  h1 {
-    font-size: 4rem;
+  h2 {
+    font-size: 2.5rem;
+    @media (min-width: ${bp.sm}) {
+      font-size: 3rem;
+    }
+    @media (min-width: ${bp.md}) {
+      font-size: 4rem;
+    }
   }
 
-  h2 {
+  h3 {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import { bp } from "../utils/styleUtils";
 
 const activeHashLink = css`
   background-color: #1a202c;
@@ -27,10 +28,26 @@ function PortfolioNav({ projects, section, setSection }) {
   return (
     <aside
       css={css`
-        text-align: right;
-        white-space: nowrap;
-        transform: translateY(100px);
-        margin: 0px 30px 0px -60px;
+        background: #ffffff;
+        padding-top: 16px;
+        padding-bottom: 20px;
+        text-align: center;
+        width: 100vw;
+        transform: translateX(-32px);
+        @media (min-width: ${bp.md}) {
+          transform: translateX(-80px);
+        }
+        @media (min-width: ${bp.lg}) {
+          background: none;
+          padding-top: 0px;
+          margin-bottom: 0px;
+          text-align: right;
+
+          white-space: nowrap;
+          transform: translateY(100px);
+          margin: 0px 60px 0px -60px;
+          width: 100%;
+        }
       `}
     >
       <div
@@ -42,12 +59,16 @@ function PortfolioNav({ projects, section, setSection }) {
         <ul
           css={css`
             font-weight: 600;
+            padding-left: 0;
             > li {
               list-style-type: none;
               margin-bottom: 0.25rem;
               &:last-child {
                 margin-right: 0;
               }
+            }
+            @media (min-width: ${bp.lg}) {
+              padding-left: 1.25rem;
             }
           `}
         >
