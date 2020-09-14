@@ -5,7 +5,7 @@ import HeartIcon from "../../../assets/heart.svg";
 import { ButtonLink } from "../Button";
 import ResumePDF from "./assets/Ian_Logan_Resume.pdf";
 
-function Home() {
+export function Home() {
   return (
     <div
       css={css`
@@ -73,5 +73,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
