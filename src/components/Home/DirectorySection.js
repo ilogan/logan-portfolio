@@ -2,6 +2,8 @@ import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
 
+import PortfolioSVG from "./assets/portfolio.svg";
+
 import DirectoryBox from "./DirectoryBox";
 
 function Directory() {
@@ -18,13 +20,21 @@ function Directory() {
           css={css`
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
           `}
         >
           <DirectoryBox
             title="Portfolio"
-            content="Here are some of my favorite projects I've made exploring different technologies"
+            content="Some of my favorite projects."
             color="#fff250"
+            svg={PortfolioSVG}
           />
+          {/* <DirectoryBox
+            title="About"
+            content="A little bit about who I am and how I got here."
+            color="#d582ff"
+            svg={PortfolioSVG}
+          /> */}
         </nav>
       </div>
     </section>

@@ -6,7 +6,6 @@ import { Link } from "gatsby";
 const DirectoryLink = styled(Link)`
   display: block;
   width: 300px;
-  height: 300px;
   background-color: #ffffff;
   border: 4px solid #1a202c;
   border-radius: 8px;
@@ -15,11 +14,12 @@ const DirectoryLink = styled(Link)`
   text-decoration: none;
 `;
 
-function DirectoryBox({ title, content, color }) {
+function DirectoryBox({ title, content, color, svg: SVG }) {
   return (
     <DirectoryLink
       to={`/${title.toLowerCase()}`}
       css={css`
+        margin-bottom: 64px;
         &:hover {
           background-color: ${color};
           cursor: pointer;
@@ -41,12 +41,23 @@ function DirectoryBox({ title, content, color }) {
       </div>
       <div
         css={css`
-          padding: 16px;
-          color: #1a202c;
-          line-height: 1rem;
+          height: 225px;
+          padding: 50px 30px 40px 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         `}
       >
-        {content}
+        <div
+          css={css`
+            color: #1a202c;
+          `}
+        >
+          {content}
+        </div>
+        <div>
+          <SVG width="40px" fill="#1a202c" />
+        </div>
       </div>
     </DirectoryLink>
   );
