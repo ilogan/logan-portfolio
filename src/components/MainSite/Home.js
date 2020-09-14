@@ -2,7 +2,8 @@ import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
 import HeartIcon from "../../../assets/heart.svg";
-import Button from "../Button";
+import { ButtonLink } from "../Button";
+import ResumePDF from "./assets/Ian_Logan_Resume.pdf";
 
 function Home() {
   return (
@@ -67,7 +68,7 @@ function Home() {
             keep a digital journal of my code.
           </p>
         </div>
-        <Button>Here's my Resumé</Button>
+        <ButtonLink href={ResumePDF}>Here's my Resumé</ButtonLink>
       </div>
     </div>
   );
