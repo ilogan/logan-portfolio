@@ -60,6 +60,12 @@ const typography = css`
     line-height: 170%;
   }
 
+  small {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+
   ul {
     padding-left: 1.25rem;
   }
