@@ -9,8 +9,8 @@ function HeroSection() {
   return (
     <section
       css={css`
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 144px;
+        padding-bottom: 112px;
         background-color: white;
       `}
     >

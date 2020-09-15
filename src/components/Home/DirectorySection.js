@@ -11,8 +11,8 @@ function Directory() {
     <section
       css={css`
         background-color: #3ea5ff;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 85px;
+        padding-bottom: 60px;
       `}
     >
       <div css={contentWidth}>
