@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { contentWidth } from "../utils/styleUtils";
+import { contentWidth, UnorderedList } from "../utils/styleUtils";
 import { Link } from "gatsby";
 import GithubSVG from "../../assets/github.svg";
 import LinkedInSVG from "../../assets/linkedin-plain.svg";
@@ -74,19 +74,6 @@ function Footer() {
     </footer>
   );
 }
-
-const UnorderedList = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding-left: 0;
-  > li {
-    margin-right: 20px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-`;
 
 const InternalLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
