@@ -29,15 +29,15 @@ function Heading({ title, children, backgroundColor }) {
             <h1
               css={css`
                 color: #ffffff;
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: 700;
-                padding: 4px 20px;
+                padding: 4px 55px;
                 background-color: #1a202c;
                 width: fit-content;
                 margin: 0 auto;
                 margin-bottom: 48px;
                 border-radius: 8px;
-                margin-top: -104px;
+                margin-top: -96px;
               `}
             >
               {title}
