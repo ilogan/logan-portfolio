@@ -64,7 +64,7 @@ export default () => {
 
   return (
     <GlobalLayout>
-      <Heading title="Portfolio">
+      <Heading title="Portfolio" backgroundColor="#fffa5f">
         Here are some of my favorite projects I've made exploring different
         technologies.
       </Heading>

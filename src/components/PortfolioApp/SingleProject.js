@@ -81,7 +81,7 @@ function SingleProject({ project, number, setSection }) {
                     justify-content: center;
                     align-items: center;
 
-                    background-color: #baebff;
+                    background-color: #fffa5f;
                     border: 4px solid #1a202c;
                     border-radius: 50%;
                     color: #1a202c;

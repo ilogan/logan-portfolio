@@ -5,7 +5,7 @@ import { About } from "../components/About";
 
 export default () => (
   <GlobalLayout>
-    <Heading title="About Me">
+    <Heading title="About Me" backgroundColor="#ff9ae9">
       I hold a B.S. in Computer Science, but there's a lot more to my story than
       that.
     </Heading>
