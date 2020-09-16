@@ -28,6 +28,9 @@ function Footer() {
             <li>
               <InternalLink to="/portfolio">portfolio</InternalLink>
             </li>
+            <li>
+              <InternalLink to="/about">about</InternalLink>
+            </li>
           </UnorderedList>
         </nav>
         <div
