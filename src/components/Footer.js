@@ -79,7 +79,7 @@ function Footer() {
 }
 
 const InternalLink = styled(Link)`
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffffaa;
   text-decoration: none;
   font-size: 1rem;
   &:hover {
@@ -103,7 +103,7 @@ function ExternalLink({ children, href, icon }) {
 }
 
 const linkIconCSS = css`
-  fill: rgba(255, 255, 255, 0.8);
+  fill: #ffffffaa;
   &:hover {
     fill: #ffffff;
   }

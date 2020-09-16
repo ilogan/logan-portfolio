@@ -6,14 +6,15 @@ import { css } from "@emotion/core";
 import { contentWidth, UnorderedList } from "../utils/styleUtils";
 
 const NavLink = styled(Link)`
-  color: white;
+  color: #ffffffaa;
   text-decoration: none;
   padding-bottom: 4px;
   &:hover {
-    border-bottom: 2px solid #3ea5ff;
+    color: #ffffff;
   }
   &.current-page {
-    border-bottom: 2px solid #3ea5ff;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
   }
 `;
 
@@ -43,6 +44,7 @@ function Navbar() {
           <NavLink
             to="/"
             css={css`
+              color: #ffffff;
               font-weight: 500;
             `}
           >
