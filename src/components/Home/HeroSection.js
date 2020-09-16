@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
-import HeartIcon from "../../../assets/heart.svg";
+import HeartIcon from "../../../assets/laptop-with-heart.svg";
 import { ButtonLink } from "../Button";
 import ResumePDF from "./assets/Ian_Logan_Resume.pdf";
 
@@ -33,7 +33,7 @@ function HeroSection() {
           <HeartIcon
             height="64px"
             css={css`
-              fill: #f56565;
+              fill: #1a202c;
               padding-right: 16px;
             `}
           />
