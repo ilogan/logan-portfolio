@@ -12,7 +12,7 @@ export function About() {
       <div css={contentWidth}>
         <h2
           css={[
-            textPadding,
+            textWidth,
             css`
               font-size: 2rem;
               padding-top: 32px;
@@ -25,7 +25,7 @@ export function About() {
         </h2>
         <div
           css={[
-            textPadding,
+            textWidth,
             css`
               > p {
                 margin-bottom: 16px;
@@ -82,6 +82,7 @@ export function About() {
   );
 }
 
-const textPadding = css`
-  padding: 0 130px;
+const textWidth = css`
+  max-width: 730px;
+  margin: 0 auto;
 `;
