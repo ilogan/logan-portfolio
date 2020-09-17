@@ -56,7 +56,7 @@ function DirectoryBox({ title, content, color, svg: SVG }) {
           {content}
         </div>
         <div>
-          <SVG width="40px" fill="#1a202c" />
+          <SVG width="50px" stroke="#1a202c" />
         </div>
       </div>
     </DirectoryLink>

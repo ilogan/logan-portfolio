@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
 
 import PortfolioSVG from "./assets/portfolio.svg";
+import AboutSVG from "./assets/at-symbol.svg";
 
 import DirectoryBox from "./DirectoryBox";
 
@@ -29,12 +30,12 @@ function Directory() {
             color="#fff250"
             svg={PortfolioSVG}
           />
-          {/* <DirectoryBox
+          <DirectoryBox
             title="About"
-            content="A little bit about who I am and how I got here."
-            color="#d582ff"
-            svg={PortfolioSVG}
-          /> */}
+            content="A little bit about who I am."
+            color="#ff91e7"
+            svg={AboutSVG}
+          />
         </nav>
       </div>
     </section>

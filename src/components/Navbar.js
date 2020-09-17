@@ -3,14 +3,18 @@ import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
-import { contentWidth } from "../utils/styleUtils";
+import { contentWidth, UnorderedList } from "../utils/styleUtils";
 
 const NavLink = styled(Link)`
-  color: white;
+  color: #ffffffaa;
   text-decoration: none;
   padding-bottom: 4px;
+  &:hover {
+    color: #ffffff;
+  }
   &.current-page {
-    border-bottom: 2px solid #3ea5ff;
+    color: #ffffff;
+    border-bottom: 2px solid #c2c2c2;
   }
 `;
 
@@ -40,6 +44,7 @@ function Navbar() {
           <NavLink
             to="/"
             css={css`
+              color: #ffffff;
               font-weight: 500;
             `}
           >
@@ -47,9 +52,18 @@ function Navbar() {
           </NavLink>
         </div>
         <div>
-          <NavLink to="/portfolio" activeClassName="current-page">
-            portfolio
-          </NavLink>
+          <UnorderedList>
+            <li>
+              <NavLink to="/portfolio" activeClassName="current-page">
+                portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" activeClassName="current-page">
+                about
+              </NavLink>
+            </li>
+          </UnorderedList>
         </div>
       </nav>
     </header>

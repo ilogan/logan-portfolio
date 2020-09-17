@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { contentWidth } from "../utils/styleUtils";
+import { contentWidth, UnorderedList } from "../utils/styleUtils";
 import { Link } from "gatsby";
 import GithubSVG from "../../assets/github.svg";
 import LinkedInSVG from "../../assets/linkedin-plain.svg";
@@ -27,6 +27,9 @@ function Footer() {
             </li>
             <li>
               <InternalLink to="/portfolio">portfolio</InternalLink>
+            </li>
+            <li>
+              <InternalLink to="/about">about</InternalLink>
             </li>
           </UnorderedList>
         </nav>
@@ -75,21 +78,8 @@ function Footer() {
   );
 }
 
-const UnorderedList = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding-left: 0;
-  > li {
-    margin-right: 20px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-`;
-
 const InternalLink = styled(Link)`
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffffaa;
   text-decoration: none;
   font-size: 1rem;
   &:hover {
@@ -113,7 +103,7 @@ function ExternalLink({ children, href, icon }) {
 }
 
 const linkIconCSS = css`
-  fill: rgba(255, 255, 255, 0.8);
+  fill: #ffffffaa;
   &:hover {
     fill: #ffffff;
   }

@@ -2,13 +2,11 @@ import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth, flex } from "../utils/styleUtils";
 
-function Heading({ title, children }) {
+function Heading({ title, children, backgroundColor }) {
   return (
     <div
       css={css`
-        padding-top: 4rem;
-        padding-bottom: 2rem;
-        background-color: white;
+        padding-top: 8rem;
       `}
     >
       <div
@@ -17,32 +15,40 @@ function Heading({ title, children }) {
           css`
             flex-direction: column;
             text-align: center;
-            background: #baebff;
-            padding: 50px 0;
-            border-top: 4px solid #3ea5ff;
-            border-bottom: 4px solid #3ea5ff;
+            background-color: ${backgroundColor ? backgroundColor : "#baebff"};
+            padding: 65px 0;
+            border-top: 4px solid #1a202c;
+            border-bottom: 4px solid #1a202c;
           `
         ]}
       >
         <div css={contentWidth}>
-          <h1
-            css={css`
-              color: #3ea5ff;
-              font-size: 3rem;
-              font-weight: 700;
-              padding-bottom: 1rem;
-            `}
-          >
-            {title}
-          </h1>
-          <p
-            css={css`
-              font-weight: 600;
-              font-size: 1.5rem;
-            `}
-          >
-            {children}
-          </p>
+          <div css={css``}>
+            <h1
+              css={css`
+                color: #ffffff;
+                font-size: 2.5rem;
+                font-weight: 700;
+                padding: 4px 55px;
+                background-color: #1a202c;
+                width: fit-content;
+                margin: 0 auto;
+                margin-bottom: 48px;
+                border-radius: 8px;
+                margin-top: -96px;
+              `}
+            >
+              {title}
+            </h1>
+            <p
+              css={css`
+                font-weight: 600;
+                font-size: 1.5rem;
+              `}
+            >
+              {children}
+            </p>
+          </div>
         </div>
       </div>
     </div>
