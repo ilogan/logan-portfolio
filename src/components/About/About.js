@@ -6,7 +6,6 @@ export function About() {
   return (
     <section
       css={css`
-        background-color: #ffffff;
         padding-bottom: 64px;
       `}
     >

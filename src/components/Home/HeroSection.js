@@ -11,7 +11,6 @@ function HeroSection() {
       css={css`
         padding-top: 144px;
         padding-bottom: 112px;
-        background-color: white;
       `}
     >
       <div
@@ -50,15 +49,11 @@ function HeroSection() {
             margin-bottom: 48px;
           `}
         >
-          <p
-            css={css`
-              color: #718096;
-            `}
-          >
+          <p>
             Hey! I’m a{" "}
             <span
               css={css`
-                color: #0577da;
+                color: #0061b5;
               `}
             >
               full stack software engineer

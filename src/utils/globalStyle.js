@@ -58,6 +58,7 @@ const typography = css`
 
   p {
     line-height: 170%;
+    color: #1a202c;
   }
 
   small {

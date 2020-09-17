@@ -14,7 +14,7 @@ const NavLink = styled(Link)`
   }
   &.current-page {
     color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #c2c2c2;
   }
 `;
 

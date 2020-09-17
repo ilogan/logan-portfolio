@@ -7,8 +7,6 @@ function Heading({ title, children, backgroundColor }) {
     <div
       css={css`
         padding-top: 8rem;
-        padding-bottom: 2rem;
-        background-color: white;
       `}
     >
       <div
