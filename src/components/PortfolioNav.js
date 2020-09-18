@@ -28,7 +28,6 @@ function PortfolioNav({ projects, section, setSection }) {
   return (
     <aside
       css={css`
-        background: #ffffff;
         padding-top: 16px;
         padding-bottom: 20px;
         text-align: center;
@@ -38,7 +37,6 @@ function PortfolioNav({ projects, section, setSection }) {
           transform: translateX(-80px);
         }
         @media (min-width: ${bp.lg}) {
-          background: none;
           padding-top: 0px;
           margin-bottom: 0px;
           text-align: right;

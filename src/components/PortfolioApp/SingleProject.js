@@ -28,7 +28,6 @@ function SingleProject({ project, number, setSection }) {
       <div
         css={css`
           position: absolute;
-          background-color: white;
           width: 100vw;
           height: 300px;
           z-index: -1;
@@ -81,7 +80,7 @@ function SingleProject({ project, number, setSection }) {
                     justify-content: center;
                     align-items: center;
 
-                    background-color: #fffa5f;
+                    background-color: #ffffff;
                     border: 4px solid #1a202c;
                     border-radius: 50%;
                     color: #1a202c;
@@ -109,11 +108,9 @@ function SingleProject({ project, number, setSection }) {
                     @media (min-width: ${bp.md}) {
                       transform: translateY(5px);
                       margin-right: 16px;
-                      height: 70px;
-                      min-width: 70px;
-                      width: 70px;
-
-                      font-size: 2.5rem;
+                      height: 60px;
+                      min-width: 60px;
+                      width: 60px;
                     }
                   `}
                 >
@@ -137,7 +134,7 @@ function SingleProject({ project, number, setSection }) {
                     align-items: center;
                     width: fit-content;
                     font-size: 0.825rem;
-                    color: #586377;
+                    color: #343c4a;
                     text-decoration: none;
                     margin: 0 auto;
 
@@ -158,7 +155,7 @@ function SingleProject({ project, number, setSection }) {
                   <LinkIcon
                     height="1rem"
                     css={css`
-                      fill: #586377;
+                      fill: #343c4a;
                       padding-right: 0.5rem;
                     `}
                   />
