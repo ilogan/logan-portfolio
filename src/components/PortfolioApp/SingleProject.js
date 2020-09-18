@@ -4,7 +4,7 @@ import Image from "gatsby-image";
 import { flex, bp } from "../../utils/styleUtils";
 import LinkIcon from "../../../assets/link.svg";
 import Tag from "../Tag";
-import GithubButton from "./GithubButton";
+import { ButtonLink } from "../Button";
 
 function SingleProject({ project, number, setSection }) {
   const sectionRef = useRef(null);
@@ -284,23 +284,14 @@ function SingleProject({ project, number, setSection }) {
               ))}
             </ul>
           </div>
-          <div>
-            <div
-              css={css`
-                display: inline-block;
-                text-align: center;
-                margin-bottom: 10rem;
-              `}
-            >
-              <div
-                css={css`
-                  margin-bottom: 0.5rem;
-                `}
-              >
-                check out the code on
-              </div>
-              <GithubButton url={project.githubUrl}>GitHub</GithubButton>
-            </div>
+          <div
+            css={css`
+              padding-bottom: 96px;
+            `}
+          >
+            <ButtonLink href={project.githubUrl} dark>
+              check it out on GitHub
+            </ButtonLink>
           </div>
         </div>
       </div>
