@@ -74,48 +74,7 @@ function SingleProject({ project, number, setSection }) {
                   }
                 `}
               >
-                <div
-                  css={css`
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    background-color: #ffffff;
-                    border: 4px solid #1a202c;
-                    border-radius: 50%;
-                    color: #1a202c;
-
-                    height: 40px;
-                    min-width: 40px;
-                    width: 40px;
-                    margin: 0 auto;
-                    margin-bottom: 16px;
-
-                    font-weight: 800;
-                    font-size: 1.25rem;
-
-                    @media (min-width: ${bp.sm}) {
-                      margin-right: 16px;
-                      margin-bottom: 0;
-                      margin-left: 0;
-                      height: 55px;
-                      min-width: 55px;
-                      width: 55px;
-
-                      font-size: 2rem;
-                    }
-
-                    @media (min-width: ${bp.md}) {
-                      transform: translateY(5px);
-                      margin-right: 16px;
-                      height: 60px;
-                      min-width: 60px;
-                      width: 60px;
-                    }
-                  `}
-                >
-                  {number}
-                </div>
+                <ProjectNumber number={number} />
                 <h2
                   css={css`
                     text-align: center;
@@ -296,6 +255,53 @@ function SingleProject({ project, number, setSection }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function ProjectNumber({ number }) {
+  return (
+    <div
+      css={css`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #fffb5e;
+        border: 4px solid #1a202c;
+        border-radius: 50%;
+        color: #1a202c;
+
+        height: 40px;
+        min-width: 40px;
+        width: 40px;
+        margin: 0 auto;
+        margin-bottom: 16px;
+
+        font-weight: 800;
+        font-size: 1.25rem;
+
+        @media (min-width: ${bp.sm}) {
+          margin-right: 16px;
+          margin-bottom: 0;
+          margin-left: 0;
+          height: 55px;
+          min-width: 55px;
+          width: 55px;
+
+          font-size: 2rem;
+        }
+
+        @media (min-width: ${bp.md}) {
+          transform: translateY(5px);
+          margin-right: 16px;
+          height: 60px;
+          min-width: 60px;
+          width: 60px;
+        }
+      `}
+    >
+      {number}
+    </div>
   );
 }
 
