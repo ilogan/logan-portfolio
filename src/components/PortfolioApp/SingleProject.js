@@ -27,9 +27,22 @@ function SingleProject({ project, number, setSection }) {
     <section id={project.title} ref={sectionRef}>
       <div
         css={css`
+          height: 36px;
+        `}
+      ></div>
+      <div
+        css={css`
           width: 100%;
-          margin-top: 24px;
-          margin-bottom: 16px;
+          margin-bottom: 10px;
+          margin-top: 60px;
+          padding: 12px 8px 12px;
+          border: 4px solid #1a202c;
+          border-radius: 8px 8px 0 0;
+          background: #ffffff;
+          box-shadow: 12px 30px;
+          @media (min-width: ${bp.sm}) {
+            padding: 12px 34px 18px;
+          }
           @media (min-width: ${bp.md}) {
             margin-top: 60px;
           }
@@ -39,16 +52,36 @@ function SingleProject({ project, number, setSection }) {
           css={css`
             margin-bottom: 12px;
             @media (min-width: ${bp.sm}) {
-              display: flex;
+              /* display: flex; */
             }
           `}
         >
-          <ProjectNumber number={number} />
+          <div
+            css={css`
+              width: fit-content;
+              margin: 0 auto;
+              margin-top: -36px;
+              margin-bottom: 16px;
+              @media (min-width: ${bp.sm}) {
+                margin-top: -45px;
+              }
+            `}
+          >
+            <ProjectNumber number={number} />
+          </div>
           <h2
             css={css`
+              font-size: 1.5rem;
+              line-height: 1;
               text-align: center;
               @media (min-width: ${bp.sm}) {
-                text-align: left;
+                font-size: 2rem;
+              }
+              @media (min-width: ${bp.md}) {
+                font-size: 3rem;
+              }
+              @media (min-width: ${bp.lg}) {
+                font-size: 4rem;
               }
             `}
           >
@@ -61,18 +94,18 @@ function SingleProject({ project, number, setSection }) {
               display: flex;
               align-items: center;
               width: fit-content;
-              font-size: 0.825rem;
+              font-size: 0.75rem;
               color: #343c4a;
               text-decoration: none;
               margin: 0 auto;
 
               @media (min-width: ${bp.sm}) {
-                margin: 0;
-                transform: translateX(75px);
+                /* margin: 0; */
+                /* transform: translateX(75px); */
                 font-size: 1rem;
               }
               @media (min-width: ${bp.md}) {
-                transform: translateX(96px);
+                /* transform: translateX(96px); */
                 font-size: 1.125rem;
               }
             `}
@@ -81,10 +114,14 @@ function SingleProject({ project, number, setSection }) {
             rel="noopener noreferrer"
           >
             <LinkIcon
-              height="1rem"
               css={css`
+                height: 0.75rem;
                 fill: #343c4a;
-                padding-right: 0.5rem;
+                padding-right: 4px;
+                @media (min-width: ${bp.sm}) {
+                  padding-right: 8px;
+                  height: 1rem;
+                }
               `}
             />
             {project.siteUrl}
@@ -107,15 +144,15 @@ function SingleProject({ project, number, setSection }) {
             fluid={project.fluid}
             css={css`
               width: 100%;
-              border-radius: 8px;
-              border: 1px solid #1a202c;
+              border-radius: 0 0 8px 8px;
+              border: 2px solid #1a202c;
               box-shadow: 12px 12px #1a202c;
             `}
           />
         </div>
         <div
           css={css`
-            margin-bottom: 4rem;
+            margin-bottom: 64px;
           `}
         >
           <ul
@@ -214,16 +251,16 @@ function ProjectNumber({ number }) {
         height: 40px;
         min-width: 40px;
         width: 40px;
-        margin: 0 auto;
-        margin-bottom: 16px;
+        /* margin: 0 auto; */
+        /* margin-bottom: 16px; */
 
         font-weight: 800;
         font-size: 1.25rem;
 
         @media (min-width: ${bp.sm}) {
-          margin-right: 16px;
-          margin-bottom: 0;
-          margin-left: 0;
+          /* margin-right: 16px; */
+          /* margin-bottom: 0; */
+          /* margin-left: 0; */
           height: 55px;
           min-width: 55px;
           width: 55px;
@@ -232,8 +269,8 @@ function ProjectNumber({ number }) {
         }
 
         @media (min-width: ${bp.md}) {
-          transform: translateY(5px);
-          margin-right: 16px;
+          /* transform: translateY(5px); */
+          /* margin-right: 16px; */
           height: 60px;
           min-width: 60px;
           width: 60px;
