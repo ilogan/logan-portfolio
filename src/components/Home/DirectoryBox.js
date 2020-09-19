@@ -20,6 +20,7 @@ function DirectoryBox({ title, content, color, svg: SVG }) {
       to={`/${title.toLowerCase()}`}
       css={css`
         margin-bottom: 64px;
+        margin-right: 24px;
         &:hover {
           background-color: ${color};
           cursor: pointer;

@@ -6,7 +6,7 @@ export function About() {
   return (
     <section
       css={css`
-        padding-bottom: 64px;
+        padding-bottom: 120px;
       `}
     >
       <div css={contentWidth}>
@@ -16,7 +16,7 @@ export function About() {
             css`
               font-size: 2rem;
               padding-top: 32px;
-              margin-top: 32px;
+              margin-top: 64px;
               margin-bottom: 16px;
             `
           ]}

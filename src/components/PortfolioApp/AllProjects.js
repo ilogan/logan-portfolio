@@ -22,7 +22,11 @@ function AllProjects({ projects }) {
         section={section}
         setSection={setSection}
       />
-      <div>
+      <div
+        css={css`
+          margin-bottom: 48px;
+        `}
+      >
         {projects.map((project, i) => (
           <SingleProject
             key={project._id}
