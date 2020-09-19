@@ -27,20 +27,30 @@ function SingleProject({ project, number, setSection }) {
     <section id={project.title} ref={sectionRef}>
       <div
         css={css`
-          height: 36px;
+          position: absolute;
+          left: 0;
+          width: 100vw;
+          height: 180px;
+          z-index: -1;
+          background-color: white;
+          @media (min-width: ${bp.sm}) {
+            position: static;
+            width: 0;
+            height: 36px;
+          }
         `}
       ></div>
       <div
         css={css`
           width: 100%;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
           margin-top: 60px;
           padding: 12px 8px 12px;
-          border: 4px solid #1a202c;
-          border-radius: 8px 8px 0 0;
           background: #ffffff;
-          box-shadow: 12px 30px;
           @media (min-width: ${bp.sm}) {
+            ${projectBorderCSS}
+            border-radius: 8px 8px 0 0;
+            box-shadow: 12px 32px;
             padding: 12px 34px 18px;
           }
           @media (min-width: ${bp.md}) {
@@ -60,7 +70,7 @@ function SingleProject({ project, number, setSection }) {
             css={css`
               width: fit-content;
               margin: 0 auto;
-              margin-top: -36px;
+              margin-top: -33px;
               margin-bottom: 16px;
               @media (min-width: ${bp.sm}) {
                 margin-top: -45px;
@@ -79,9 +89,6 @@ function SingleProject({ project, number, setSection }) {
               }
               @media (min-width: ${bp.md}) {
                 font-size: 3rem;
-              }
-              @media (min-width: ${bp.lg}) {
-                font-size: 4rem;
               }
             `}
           >
@@ -142,12 +149,17 @@ function SingleProject({ project, number, setSection }) {
           <Image
             alt="project"
             fluid={project.fluid}
-            css={css`
-              width: 100%;
-              border-radius: 0 0 8px 8px;
-              border: 2px solid #1a202c;
-              box-shadow: 12px 12px #1a202c;
-            `}
+            css={[
+              projectBorderCSS,
+              css`
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 12px 12px #1a202c;
+                @media (min-width: ${bp.sm}) {
+                  border-radius: 0 0 8px 8px;
+                }
+              `
+            ]}
           />
         </div>
         <div
@@ -244,23 +256,18 @@ function ProjectNumber({ number }) {
         align-items: center;
 
         background-color: #fffb5e;
-        border: 4px solid #1a202c;
+        ${projectBorderCSS}
         border-radius: 50%;
         color: #1a202c;
 
         height: 40px;
         min-width: 40px;
         width: 40px;
-        /* margin: 0 auto; */
-        /* margin-bottom: 16px; */
 
         font-weight: 800;
         font-size: 1.25rem;
 
         @media (min-width: ${bp.sm}) {
-          /* margin-right: 16px; */
-          /* margin-bottom: 0; */
-          /* margin-left: 0; */
           height: 55px;
           min-width: 55px;
           width: 55px;
@@ -269,8 +276,6 @@ function ProjectNumber({ number }) {
         }
 
         @media (min-width: ${bp.md}) {
-          /* transform: translateY(5px); */
-          /* margin-right: 16px; */
           height: 60px;
           min-width: 60px;
           width: 60px;
@@ -281,5 +286,12 @@ function ProjectNumber({ number }) {
     </div>
   );
 }
+
+const projectBorderCSS = css`
+  border: 2px solid #1a202c;
+  @media (min-width: ${bp.sm}) {
+    border: 4px solid #1a202c;
+  }
+`;
 
 export default SingleProject;
