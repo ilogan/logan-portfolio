@@ -52,12 +52,13 @@ const typography = css`
   }
 
   h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   p {
-    line-height: 170%;
+    line-height: 1.7;
+    margin-bottom: 1.55rem;
     color: #1a202c;
   }
 
@@ -72,7 +73,8 @@ const typography = css`
   }
 
   li {
-    line-height: 170%;
+    line-height: 1.7rem;
+    margin-bottom: calc(1.55rem / 2);
   }
 `;
 

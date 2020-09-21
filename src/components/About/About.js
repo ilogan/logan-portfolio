@@ -28,53 +28,51 @@ export function About() {
             textWidth,
             css`
               > p {
-                margin-bottom: 16px;
+                margin-bottom: 25px;
               }
             `
           ]}
         >
           <p>
-            I started programming 8 years ago. Here are just a few of the
-            technologies I've experimented with in that time:
+            I'm a software engineer with experience programming using many
+            different technologies. Some of my accomplishments these past few
+            years include:
           </p>
           <p>
             <ul>
               <li>
-                I've built neural networks with TensorFlow (RNNs, CNNs, GANs)
+                building neural networks with TensorFlow (RNNs, CNNs, GANs)
               </li>
+              <li>controlling simulated robots in Gazebo with Python</li>
               <li>
-                I've controlled simulated robots in a Gazebo environment with
-                Python
-              </li>
-              <li>
-                I've created fullstack Javascript applications with React and
+                and creating fullstack Javascript applications with React and
                 Node
               </li>
             </ul>
           </p>
           <p>
-            In each of these instances I've been excited to learn something new.
-            I've been excited to be challenged. I've been confident to find
-            success.
+            In each of the above instances, I've been excited to learn something
+            new &mdash; excited to be challenged. Most important of all, I've
+            been confident I would find success.
           </p>
           <p>
-            It hasn't always been this way. Before the neural networks and apps,
-            I wrote Hello World. I struggled and felt imposter syndrome.{" "}
-            <span
-              css={css`
-                font-style: italic;
-              `}
-            >
-              I was afraid of FizzBuzz.
-            </span>{" "}
-            I even stopped coding for a period of time.
+            I haven't always felt this way, though. I started coding eight years
+            ago. Before the neural networks, the robots, and the web apps, I
+            wrote Hello World. I struggled.{" "}
+            <span css={italic}>I was afraid of FizzBuzz.</span> I even stopped
+            coding for some time.
+          </p>
+          <p>I've decided it's time to start documenting my coding journey.</p>
+          <p>
+            This site is my effort to solidify the present while I make up for
+            lost history. It is my outlet to share my successes and failures
+            with others.
           </p>
           <p>
-            This site serves as a way for me to share my successes and failures
-            with others. It is an effort to solidify and document the present
-            while I make up for 8 years of lost and diluted history. Most
-            importantly, I wish to share my excitement for programming and
-            inspire others to be active in their pursuit for knowledge.
+            My main wish is that by learning in public, I can create some
+            meaningful content that resonates with someone out there. I'm
+            passionate about solving problems with code; hopefully, you leave my
+            site inspired to do the same.
           </p>
         </div>
       </div>
@@ -85,4 +83,8 @@ export function About() {
 const textWidth = css`
   max-width: 730px;
   margin: 0 auto;
+`;
+
+const italic = css`
+  font-style: italic;
 `;
