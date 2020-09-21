@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { contentWidth } from "../../utils/styleUtils";
+import { contentWidth, bp } from "../../utils/styleUtils";
 import HeartIcon from "../../../assets/laptop-with-heart.svg";
 import { ButtonLink } from "../Button";
 import ResumePDF from "./assets/Ian_Logan_Resume.pdf";
@@ -29,16 +29,30 @@ function HeroSection() {
             margin-bottom: 16px;
           `}
         >
-          <HeartIcon
-            height="64px"
-            css={css`
-              fill: #1a202c;
-              padding-right: 16px;
-            `}
-          />
+          <div>
+            <HeartIcon
+              css={css`
+                fill: #1a202c;
+                padding-right: 16px;
+                width: 55px;
+                @media (min-width: ${bp.sm}) {
+                  width: 70px;
+                }
+                @media (min-width: ${bp.md}) {
+                  width: 80px;
+                }
+              `}
+            />
+          </div>
           <h1
             css={css`
-              font-size: 5rem;
+              font-size: 3rem;
+              @media (min-width: ${bp.sm}) {
+                font-size: 4rem;
+              }
+              @media (min-width: ${bp.md}) {
+                font-size: 5rem;
+              }
             `}
           >
             Ian Logan

@@ -25,7 +25,7 @@ const darkCSS = css`
   color: #ffffff;
   background: #1a202c;
   box-shadow: 0 1px #1a202c;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #9aa2af;
   &:hover {
     background-color: #2f394a;
   }
@@ -34,7 +34,7 @@ const darkCSS = css`
   }
   &:active {
     transform: translateY(2px);
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #9aa2af;
     box-shadow: 0 1px #1a202c;
     margin-bottom: 2px;
   }
