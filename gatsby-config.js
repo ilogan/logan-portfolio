@@ -1,7 +1,14 @@
 require("dotenv").config();
+
 module.exports = {
+  siteMetadata: {
+    title: `Ian Logan`,
+    siteUrl: `https://ianlogan.dev/`,
+    description: `Hey! I’m a full stack software engineer. Check out my projects and learn in public with me.`
+  },
   plugins: [
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
     {
@@ -47,7 +54,7 @@ module.exports = {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-        uploadFolder: 'portfolio'
+        uploadFolder: "portfolio"
       }
     }
   ]
