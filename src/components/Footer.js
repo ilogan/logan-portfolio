@@ -26,10 +26,10 @@ function Footer() {
               <InternalLink to="/">home</InternalLink>
             </li>
             <li>
-              <InternalLink to="/portfolio">portfolio</InternalLink>
+              <InternalLink to="/portfolio/">portfolio</InternalLink>
             </li>
             <li>
-              <InternalLink to="/about">about</InternalLink>
+              <InternalLink to="/about/">about</InternalLink>
             </li>
           </UnorderedList>
         </nav>
