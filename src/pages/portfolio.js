@@ -11,7 +11,7 @@ export default () => {
         nodes {
           name
           childCloudinaryAsset {
-            fluid(transformations: ["c_scale", "w_832"]) {
+            fluid(transformations: ["c_scale", "dpr_2.0"]) {
               ...CloudinaryAssetFluid
             }
           }

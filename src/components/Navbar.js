@@ -54,12 +54,12 @@ function Navbar() {
         <div>
           <UnorderedList>
             <li>
-              <NavLink to="/portfolio" activeClassName="current-page">
+              <NavLink to="/portfolio/" activeClassName="current-page">
                 portfolio
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="current-page">
+              <NavLink to="/about/" activeClassName="current-page">
                 about
               </NavLink>
             </li>
