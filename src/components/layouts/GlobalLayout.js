@@ -16,18 +16,18 @@ export default ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content={image} />
         <meta property="og:image:secure_url" content={image} />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="2526" />
         <meta property="og:image:height" content="1228" />
         <meta
           property="og:image:alt"
           content="The landing page for Ian Logan's website"
         />
-
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={siteUrl} />
       </Helmet>
       <Global styles={globalStyle} />
       <Navbar />
