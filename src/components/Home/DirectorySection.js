@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
 
+import BookSVG from "./assets/book-open.svg";
 import PortfolioSVG from "./assets/portfolio.svg";
 import AboutSVG from "./assets/at-symbol.svg";
 
@@ -24,6 +25,12 @@ function Directory() {
             flex-wrap: wrap;
           `}
         >
+          <DirectoryBox
+            title="Blog"
+            content="My digital journal."
+            color="#99eaff"
+            svg={BookSVG}
+          />
           <DirectoryBox
             title="Portfolio"
             content="Some of my favorite projects."
