@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { contentWidth } from "../../utils/styleUtils";
+import { contentWidth, bp } from "../../utils/styleUtils";
 
 import BookSVG from "./assets/book-open.svg";
 import PortfolioSVG from "./assets/portfolio.svg";
@@ -23,6 +23,13 @@ function Directory() {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            margin-right: -32px;
+            @media (min-width: ${bp.md}) {
+              margin-right: -56px;
+            }
+            @media (min-width: ${bp.lg}) {
+              margin-right: -64px;
+            }
           `}
         >
           <DirectoryBox

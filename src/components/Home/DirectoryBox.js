@@ -1,11 +1,13 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import { bp } from "../../utils/styleUtils";
 import { Link } from "gatsby";
 
 const DirectoryLink = styled(Link)`
   display: block;
-  width: 300px;
+  width: 275px;
+  flex-grow: 1;
   background-color: #ffffff;
   border: 4px solid #1a202c;
   border-radius: 8px;
@@ -20,13 +22,19 @@ function DirectoryBox({ title, content, color, svg: SVG }) {
       to={`/${title.toLowerCase()}/`}
       css={css`
         margin-bottom: 64px;
-        margin-right: 24px;
+        margin-right: 32px;
         &:hover {
           background-color: ${color};
           cursor: pointer;
         }
         &:focus {
           background-color: ${color};
+        }
+        @media (min-width: ${bp.md}) {
+          margin-right: 56px;
+        }
+        @media (min-width: ${bp.lg}) {
+          margin-right: 64px;
         }
       `}
     >
@@ -42,8 +50,8 @@ function DirectoryBox({ title, content, color, svg: SVG }) {
       </div>
       <div
         css={css`
-          height: 225px;
-          padding: 50px 30px 40px 30px;
+          height: 215px;
+          padding: 40px 30px 40px 30px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
