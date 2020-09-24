@@ -54,6 +54,11 @@ function Navbar() {
         <div>
           <UnorderedList>
             <li>
+              <NavLink to="/blog/" activeClassName="current-page">
+                blog
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/portfolio/" activeClassName="current-page">
                 portfolio
               </NavLink>

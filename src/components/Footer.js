@@ -26,6 +26,9 @@ function Footer() {
               <InternalLink to="/">home</InternalLink>
             </li>
             <li>
+              <InternalLink to="/blog/">blog</InternalLink>
+            </li>
+            <li>
               <InternalLink to="/portfolio/">portfolio</InternalLink>
             </li>
             <li>
