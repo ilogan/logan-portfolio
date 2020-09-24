@@ -17,7 +17,7 @@ const DirectoryLink = styled(Link)`
 function DirectoryBox({ title, content, color, svg: SVG }) {
   return (
     <DirectoryLink
-      to={`/${title.toLowerCase()}`}
+      to={`/${title.toLowerCase()}/`}
       css={css`
         margin-bottom: 64px;
         margin-right: 24px;
