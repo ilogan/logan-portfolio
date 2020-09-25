@@ -6,7 +6,7 @@ import { Blog } from "../components/Blog";
 export default () => (
   <GlobalLayout>
     <Heading title="Blog" backgroundColor="#99eaff">
-      I like write about what tech I'm working with so others can learn with me.
+      I like to write about what tech I'm using so others can learn with me.
     </Heading>
     <Blog />
   </GlobalLayout>
