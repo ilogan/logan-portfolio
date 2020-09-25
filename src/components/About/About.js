@@ -45,7 +45,7 @@ export function About() {
               </li>
               <li>controlling simulated robots in Gazebo with Python</li>
               <li>
-                and creating fullstack Javascript applications with React and
+                and creating full-stack Javascript applications with React and
                 Node
               </li>
             </ul>
