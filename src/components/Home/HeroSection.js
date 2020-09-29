@@ -70,7 +70,7 @@ function HeroSection() {
                 color: #0061b5;
               `}
             >
-              full stack software engineer
+              full-stack software engineer
             </span>
             . I’m passionate about programming, creating apps, and helping
             others do the same. That’s why I’ve decided to learn in public and
