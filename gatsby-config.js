@@ -20,6 +20,14 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layouts/GlobalLayout.js")
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/portfolio/*`] }
     },
