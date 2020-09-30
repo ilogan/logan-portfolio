@@ -1,8 +1,10 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { contentWidth } from "../../utils/styleUtils";
+import usePosts from "../../hooks/usePosts";
 
 export function Blog() {
+  const posts = usePosts();
   return (
     <section
       css={css`
@@ -21,7 +23,9 @@ export function Blog() {
             `
           ]}
         >
-          Content need to get added here!
+          {posts.map(post => (
+            <article key={post.slug}>{post.excerpt}</article>
+          ))}
         </h2>
       </div>
     </section>
