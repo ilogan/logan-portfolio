@@ -1,7 +1,10 @@
 import React from "react";
 import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 import { contentWidth } from "../../utils/styleUtils";
 import usePosts from "../../hooks/usePosts";
+
+import PostPreview from "./PostPreview";
 
 export function Blog() {
   const posts = usePosts();
@@ -12,25 +15,32 @@ export function Blog() {
       `}
     >
       <div css={contentWidth}>
-        <h2
+        <div
           css={[
             textWidth,
             css`
-              font-size: 2rem;
               padding-top: 32px;
               margin-top: 64px;
               margin-bottom: 16px;
             `
           ]}
         >
+          <DateHeading>2020</DateHeading>
           {posts.map(post => (
-            <article key={post.slug}>{post.excerpt}</article>
+            <PostPreview key={post.slug} post={post} />
           ))}
-        </h2>
+        </div>
       </div>
     </section>
   );
 }
+
+const DateHeading = styled.h2`
+  width: fit-content;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  border-bottom: 4px solid #0061b5;
+`;
 
 const textWidth = css`
   max-width: 730px;
