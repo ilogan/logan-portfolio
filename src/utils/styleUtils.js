@@ -20,6 +20,11 @@ export const contentWidth = css`
   }
 `;
 
+export const textWidth = css`
+  max-width: 730px;
+  margin: 0 auto;
+`;
+
 // styled components
 export const UnorderedList = styled.ul`
   display: flex;

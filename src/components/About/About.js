@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { contentWidth } from "../../utils/styleUtils";
+import { contentWidth, textWidth } from "../../utils/styleUtils";
 
 export function About() {
   return (
@@ -79,11 +79,6 @@ export function About() {
     </section>
   );
 }
-
-const textWidth = css`
-  max-width: 730px;
-  margin: 0 auto;
-`;
 
 const italic = css`
   font-style: italic;

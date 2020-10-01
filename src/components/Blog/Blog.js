@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { contentWidth } from "../../utils/styleUtils";
+import { contentWidth, textWidth } from "../../utils/styleUtils";
 import usePosts from "../../hooks/usePosts";
 
 import PostPreview from "./PostPreview";
@@ -40,9 +40,4 @@ const DateHeading = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 16px;
   border-bottom: 4px solid #0061b5;
-`;
-
-const textWidth = css`
-  max-width: 730px;
-  margin: 0 auto;
 `;

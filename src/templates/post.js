@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { contentWidth } from "../utils/styleUtils";
+import { contentWidth, textWidth } from "../utils/styleUtils";
 
 import GlobalLayout from "../components/layouts/GlobalLayout";
 
@@ -25,7 +25,9 @@ function PostTemplate({ data: { mdx: post } }) {
       <section
         css={css`
           ${contentWidth}
+          ${textWidth}
           margin-top: 64px;
+          margin-bottom: 64px;
         `}
       >
         <article>
