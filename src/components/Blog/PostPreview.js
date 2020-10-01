@@ -9,19 +9,13 @@ function PostPreview({ post }) {
       <article
         css={css`
           padding: 20px 32px;
-          margin-bottom: 10px;
-          border: 2px solid #1a202c;
+          margin-bottom: 2px;
           border-radius: 8px;
           background-color: #ffffff;
-          box-shadow: 4px 4px 0 #1a202c;
+          border: 2px solid #ffffff;
+
           &:hover {
-            background-color: #383e4a;
-            > h3 {
-              color: #ffffff;
-            }
-            > p {
-              color: #a6abb5;
-            }
+            border: 2px solid #1a202c;
           }
         `}
       >
