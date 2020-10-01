@@ -19,6 +19,14 @@ function PostPreview({ post }) {
           }
         `}
       >
+        <time
+          css={css`
+            font-size: 0.75rem;
+            color: #717680;
+          `}
+        >
+          {post.date}
+        </time>
         <h3
           css={css`
             font-size: 1.25rem;
@@ -27,7 +35,7 @@ function PostPreview({ post }) {
         >
           {post.title}
         </h3>
-        <p
+        {/* <p
           css={css`
             margin-bottom: 0;
             line-height: 1;
@@ -36,7 +44,7 @@ function PostPreview({ post }) {
           `}
         >
           {post.excerpt}
-        </p>
+        </p> */}
       </article>
     </PostLink>
   );
