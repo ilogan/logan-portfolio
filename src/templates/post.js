@@ -12,6 +12,7 @@ export const query = graphql`
       frontmatter {
         title
         author
+        date(formatString: "MMMM DD, YYYY")
       }
       body
     }
@@ -19,7 +20,6 @@ export const query = graphql`
 `;
 
 function PostTemplate({ data: { mdx: post } }) {
-  console.log(post);
   return (
     <GlobalLayout>
       <section
@@ -31,6 +31,7 @@ function PostTemplate({ data: { mdx: post } }) {
         `}
       >
         <article>
+          <time>{post.frontmatter.date}</time>
           <h1
             css={css`
               font-size: 3rem;
