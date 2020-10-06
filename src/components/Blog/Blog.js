@@ -39,5 +39,5 @@ const DateHeading = styled.h2`
   width: fit-content;
   font-size: 2.5rem;
   margin-bottom: 16px;
-  border-bottom: 4px solid #0061b5;
+  border-bottom: 4px solid #3ea5ff;
 `;

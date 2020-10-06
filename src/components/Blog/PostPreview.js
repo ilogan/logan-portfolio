@@ -8,14 +8,11 @@ function PostPreview({ post }) {
     <PostLink to={post.slug}>
       <article
         css={css`
-          padding: 20px 32px;
-          margin-bottom: 2px;
+          padding: 12px 0px;
+          /* margin-bottom: 10px; */
           border-radius: 8px;
-          background-color: #ffffff;
-          border: 2px solid #ffffff;
-
-          &:hover {
-            border: 2px solid #1a202c;
+          &:hover > h3 {
+            color: #0061b5;
           }
         `}
       >
@@ -29,7 +26,7 @@ function PostPreview({ post }) {
         </time>
         <h3
           css={css`
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 4px;
           `}
         >
