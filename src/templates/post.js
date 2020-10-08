@@ -34,13 +34,21 @@ function PostTemplate({ data: { mdx: post } }) {
           <time>{post.frontmatter.date}</time>
           <h1
             css={css`
+              color: #0061b5;
               font-size: 3rem;
             `}
           >
             {post.frontmatter.title}
           </h1>
           <MDXRenderer>{post.body}</MDXRenderer>
-          <Link to="/blog/">&larr; Back</Link>
+          <Link
+            css={css`
+              color: #0061b5;
+            `}
+            to="/blog/"
+          >
+            &larr; Back
+          </Link>
         </article>
       </section>
     </GlobalLayout>
