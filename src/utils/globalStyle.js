@@ -57,7 +57,7 @@ const typography = css`
   }
 
   p {
-    line-height: 1.7;
+    line-height: 2;
     margin-bottom: 1.55rem;
     color: #1a202c;
   }
