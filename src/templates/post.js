@@ -29,23 +29,25 @@ function PostTemplate({ data: { mdx: post } }) {
       <section
         css={css`
           ${contentWidth}
-          ${textWidth}
           margin-top: 64px;
           margin-bottom: 64px;
         `}
       >
-        <article>
+        <article css={textWidth}>
           <time
             css={css`
+              display: block;
+              color: #5d6169;
               font-size: 1rem;
+              margin-bottom: 16px;
             `}
           >
             {post.frontmatter.date}
           </time>
           <h1
             css={css`
-              margin-bottom: 8px;
-              font-size: 3rem;
+              margin-bottom: 16px;
+              font-size: 2.75rem;
             `}
           >
             {post.frontmatter.title}
