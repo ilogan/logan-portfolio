@@ -11,6 +11,7 @@ const usePosts = () => {
               slug
               author
               date(formatString: "MMMM DD, YYYY")
+              tags
             }
             excerpt
           }
@@ -22,6 +23,7 @@ const usePosts = () => {
     title: post.frontmatter.title,
     slug: post.frontmatter.slug,
     author: post.frontmatter.author,
+    tags: post.frontmatter.tags,
     date: post.frontmatter.date,
     excerpt: post.excerpt
   }));

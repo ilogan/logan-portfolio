@@ -13,7 +13,7 @@ function Tag({ color, backgroundColor, children }) {
         /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
         color: ${color || defaultDark};
         background-color: ${backgroundColor || defaultLight};
-        line-height: 24px;
+        line-height: 20px;
         padding: 1px 12px;
         border-radius: 20px;
       `}

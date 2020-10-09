@@ -2,36 +2,97 @@ import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import useTags from "../../hooks/useTags";
+
+import Tag from "../Tag";
 
 function PostPreview({ post }) {
+  const tagInfo = useTags();
   return (
     <PostLink to={post.slug}>
       <article
         css={css`
-          padding: 12px 0px;
-          /* margin-bottom: 10px; */
-          border-radius: 8px;
-          &:hover > h3 {
-            color: #0061b5;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          padding: 12px 0px 0px;
+          &:hover > div > h3 {
+            border-color: #ffffff;
+            /* &:before {
+              position: absolute;
+              top: 0;
+              left: -10px;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent;
+              border-left: 10px solid #303030;
+              content: "";
+            } */
           }
         `}
       >
-        <time
+        <div
           css={css`
-            font-size: 0.75rem;
-            color: #717680;
+            margin-bottom: 6px;
+            margin-right: 12px;
           `}
         >
-          {post.date}
-        </time>
-        <h3
+          <time
+            css={css`
+              font-size: 0.875rem;
+              color: #717680;
+            `}
+          >
+            {post.date}
+          </time>
+          <h3
+            css={css`
+              /* position: relative; */
+              border-bottom: 4px solid #e2e2e2;
+              padding: -10px;
+              color: #1a202c;
+              font-size: 1.25rem;
+              margin-bottom: 0px;
+            `}
+          >
+            {post.title}
+          </h3>
+        </div>
+        <div
           css={css`
-            font-size: 1.5rem;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
           `}
         >
-          {post.title}
-        </h3>
+          <ul
+            css={css`
+              display: flex;
+              list-style: none;
+              padding-left: 0;
+              > li {
+                font-size: 0.8125rem;
+                margin-right: 8px;
+                margin-bottom: 0px;
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            `}
+          >
+            {post.tags.map(tName => {
+              return (
+                <li key={`${post.title}-${tName}`}>
+                  <Tag
+                    color={tagInfo[tName].color}
+                    backgroundColor={tagInfo[tName].backgroundColor}
+                  >
+                    {tName}
+                  </Tag>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         {/* <p
           css={css`
             margin-bottom: 0;
@@ -48,6 +109,7 @@ function PostPreview({ post }) {
 }
 
 const PostLink = styled(Link)`
+  display: block;
   text-decoration: none;
 `;
 

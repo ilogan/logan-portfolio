@@ -26,9 +26,19 @@ export function Blog() {
           ]}
         >
           <DateHeading>2020</DateHeading>
-          {posts.map(post => (
-            <PostPreview key={post.slug} post={post} />
-          ))}
+          <div
+            css={css`
+              > a {
+                padding-bottom: 16px;
+                &:last-child {
+                }
+              }
+            `}
+          >
+            {posts.map(post => (
+              <PostPreview key={post.slug} post={post} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -36,8 +46,6 @@ export function Blog() {
 }
 
 const DateHeading = styled.h2`
-  width: fit-content;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 16px;
-  border-bottom: 4px solid #3ea5ff;
 `;
