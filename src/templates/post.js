@@ -39,7 +39,7 @@ function PostTemplate({ data: { mdx: post } }) {
               display: block;
               color: #5d6169;
               font-size: 1rem;
-              margin-bottom: 16px;
+              margin-bottom: 12px;
             `}
           >
             {post.frontmatter.date}
