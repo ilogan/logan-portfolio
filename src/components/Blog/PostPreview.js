@@ -19,7 +19,7 @@ function PostPreview({ post }) {
           align-items: flex-end;
           padding: 12px 0px 0px;
           &:hover > div > h3 {
-            border-color: #ffffff;
+            border-color: #ababab;
             /* &:before {
               position: absolute;
               top: 0;
@@ -49,7 +49,7 @@ function PostPreview({ post }) {
           <h3
             css={css`
               /* position: relative; */
-              border-bottom: 4px solid #e2e2e2;
+              border-bottom: 2px solid #e2e2e2;
               padding: -10px;
               color: #1a202c;
               font-size: 1.25rem;
