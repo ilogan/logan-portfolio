@@ -9,18 +9,15 @@ import Tag from "../Tag";
 function PostPreview({ post }) {
   const tagInfo = useTags();
   return (
-    <PostLink to={post.slug}>
-      <article
-        css={css`
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          align-items: flex-end;
-          padding: 12px 0px 0px;
-          &:hover > div > h3 {
-            border-color: #ababab;
-            /* &:before {
+    <article
+      css={css`
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding: 12px 0px 0px;
+        /* &:before {
               position: absolute;
               top: 0;
               left: -10px;
@@ -29,9 +26,9 @@ function PostPreview({ post }) {
               border-left: 10px solid #303030;
               content: "";
             } */
-          }
-        `}
-      >
+      `}
+    >
+      <PostLink to={post.slug}>
         <div
           css={css`
             margin-bottom: 6px;
@@ -49,7 +46,6 @@ function PostPreview({ post }) {
           <h3
             css={css`
               /* position: relative; */
-              border-bottom: 2px solid #e2e2e2;
               padding: -10px;
               color: #1a202c;
               font-size: 1.25rem;
@@ -59,41 +55,42 @@ function PostPreview({ post }) {
             {post.title}
           </h3>
         </div>
-        <div
+      </PostLink>
+      <div
+        css={css`
+          margin-bottom: 6px;
+        `}
+      >
+        <ul
           css={css`
-            margin-bottom: 6px;
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            > li {
+              font-size: 0.8125rem;
+              margin-right: 8px;
+              margin-bottom: 0px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
           `}
         >
-          <ul
-            css={css`
-              display: flex;
-              list-style: none;
-              padding-left: 0;
-              > li {
-                font-size: 0.8125rem;
-                margin-right: 8px;
-                margin-bottom: 0px;
-                &:last-child {
-                  margin-right: 0;
-                }
-              }
-            `}
-          >
-            {post.tags.map(tName => {
-              return (
-                <li key={`${post.title}-${tName}`}>
-                  <Tag
-                    color={tagInfo[tName].color}
-                    backgroundColor={tagInfo[tName].backgroundColor}
-                  >
-                    {tName}
-                  </Tag>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        {/* <p
+          {post.tags.map(tName => {
+            return (
+              <li key={`${post.title}-${tName}`}>
+                <Tag
+                  color={tagInfo[tName].color}
+                  backgroundColor={tagInfo[tName].backgroundColor}
+                >
+                  {tName}
+                </Tag>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {/* <p
           css={css`
             margin-bottom: 0;
             line-height: 1;
@@ -103,14 +100,17 @@ function PostPreview({ post }) {
         >
           {post.excerpt}
         </p> */}
-      </article>
-    </PostLink>
+    </article>
   );
 }
 
 const PostLink = styled(Link)`
   display: block;
   text-decoration: none;
+  border-bottom: 2px solid #e2e2e2;
+  &:hover {
+    border-color: #ababab;
+  }
 `;
 
 export default PostPreview;
