@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import { bp } from "../../utils/styleUtils";
 import { Link } from "gatsby";
 import useTags from "../../hooks/useTags";
 
@@ -12,50 +13,55 @@ function PostPreview({ post }) {
     <article
       css={css`
         position: relative;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        padding: 12px 0px 0px;
+        border-radius: 4px;
+        margin-bottom: 32px;
+        @media (min-width: ${bp.lg}) {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: flex-end;
+        }
         /* &:before {
-              position: absolute;
-              top: 0;
-              left: -10px;
-              border-top: 10px solid transparent;
-              border-bottom: 10px solid transparent;
-              border-left: 10px solid #303030;
-              content: "";
-            } */
+          position: absolute;
+          top: 0;
+          left: -10px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid #303030;
+          content: "";
+        } */
       `}
     >
       <PostLink to={post.slug}>
-        <div
+        <time
           css={css`
-            margin-bottom: 6px;
-            margin-right: 12px;
+            font-size: 0.875rem;
+            color: #717680;
           `}
         >
-          <time
-            css={css`
-              font-size: 0.875rem;
-              color: #717680;
-            `}
-          >
-            {post.date}
-          </time>
-          <h3
-            css={css`
-              /* position: relative; */
-              padding: -10px;
-              color: #1a202c;
-              font-size: 1.25rem;
-              margin-bottom: 0px;
-            `}
-          >
-            {post.title}
-          </h3>
-        </div>
+          {post.date}
+        </time>
+        <h3
+          css={css`
+            padding: -10px;
+            color: #1a202c;
+            font-size: 1.25rem;
+            margin-bottom: 0px;
+          `}
+        >
+          {post.title}
+        </h3>
       </PostLink>
+      {/* <p
+        css={css`
+          margin-bottom: 0;
+          line-height: 1;
+          font-size: 1rem;
+          color: #717680;
+        `}
+      >
+        {post.excerpt}
+      </p> */}
       <div
         css={css`
           margin-bottom: 6px;
@@ -90,26 +96,23 @@ function PostPreview({ post }) {
           })}
         </ul>
       </div>
-      {/* <p
-          css={css`
-            margin-bottom: 0;
-            line-height: 1;
-            font-size: 1rem;
-            color: #717680;
-          `}
-        >
-          {post.excerpt}
-        </p> */}
     </article>
   );
 }
 
 const PostLink = styled(Link)`
   display: block;
+  width: fit-content;
+  margin-bottom: 12px;
   text-decoration: none;
   border-bottom: 2px solid #e2e2e2;
   &:hover {
-    border-color: #ababab;
+    h3 {
+      color: #004784;
+    }
+  }
+  @media (min-width: ${bp.lg}) {
+    margin-bottom: 6px;
   }
 `;
 
