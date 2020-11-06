@@ -21,15 +21,6 @@ function PostPreview({ post }) {
           flex-wrap: wrap;
           align-items: flex-end;
         }
-        /* &:before {
-          position: absolute;
-          top: 0;
-          left: -10px;
-          border-top: 10px solid transparent;
-          border-bottom: 10px solid transparent;
-          border-left: 10px solid #303030;
-          content: "";
-        } */
       `}
     >
       <PostLink to={post.slug}>
@@ -52,16 +43,6 @@ function PostPreview({ post }) {
           {post.title}
         </h3>
       </PostLink>
-      {/* <p
-        css={css`
-          margin-bottom: 0;
-          line-height: 1;
-          font-size: 1rem;
-          color: #717680;
-        `}
-      >
-        {post.excerpt}
-      </p> */}
       <div
         css={css`
           margin-bottom: 6px;
